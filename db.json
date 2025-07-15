@@ -1,0 +1,708 @@
+{
+    "menu": [
+        {
+            "id": "movies",
+            "name": "Movies",
+            "icon": "https://www.svgrepo.com/show/334673/film.svg",
+            "items": [
+                {
+                    "name": "Release Calendar",
+                    "url": "/movies/release-calendar"
+                },
+                {
+                    "name": "Top 250 Movies",
+                    "url": "/chart/top"
+                },
+                {
+                    "name": "Most Popular Movies",
+                    "url": "/chart/moviemeter"
+                },
+                {
+                    "name": "Browse Movies by Genre",
+                    "url": "/feature/genre"
+                },
+                {
+                    "name": "Top Box Office",
+                    "url": "/chart/boxoffice"
+                },
+                {
+                    "name": "Showtimes & Tickets",
+                    "url": "/showtimes"
+                },
+                {
+                    "name": "Movie News",
+                    "url": "/news/movie"
+                },
+                {
+                    "name": "India Movie Spotlight",
+                    "url": "/india"
+                }
+            ]
+        },
+        {
+            "id": "tv-shows",
+            "name": "TV Shows",
+            "icon": "https://www.svgrepo.com/show/489193/tv.svg",
+            "items": [
+                {
+                    "name": "What's on TV & Streaming",
+                    "url": "/tv"
+                },
+                {
+                    "name": "Top 250 TV Shows",
+                    "url": "/chart/toptv"
+                },
+                {
+                    "name": "Most Popular TV Shows",
+                    "url": "/chart/tvmeter"
+                },
+                {
+                    "name": "Browse TV Shows by Genre",
+                    "url": "/feature/tv-genre"
+                },
+                {
+                    "name": "TV News",
+                    "url": "/news/tv"
+                }
+            ]
+        },
+        {
+            "id": "watch",
+            "name": "Watch",
+            "icon": "https://www.svgrepo.com/show/334979/videos.svg",
+            "items": [
+                {
+                    "name": "What to Watch",
+                    "url": "/what-to-watch"
+                },
+                {
+                    "name": "Latest Trailers",
+                    "url": "/trailers"
+                },
+                {
+                    "name": "IMDb Originals",
+                    "url": "/imdb-originals"
+                },
+                {
+                    "name": "IMDb Picks",
+                    "url": "/picks"
+                },
+                {
+                    "name": "IMDb Spotlight",
+                    "url": "/spotlight"
+                },
+                {
+                    "name": "Family Entertainment Guide",
+                    "url": "/family-entertainment"
+                },
+                {
+                    "name": "IMDb Podcasts",
+                    "url": "/podcasts"
+                }
+            ]
+        },
+        {
+            "id": "awards-events",
+            "name": "Awards & Events",
+            "icon": "https://icons.veryicon.com/png/o/object/material-design-icons-1/star-circle.png",
+            "items": [
+                {
+                    "name": "Oscars",
+                    "url": "/oscars"
+                },
+                {
+                    "name": "Emmys",
+                    "url": "/emmys"
+                },
+                {
+                    "name": "San Diego Comic-Con",
+                    "url": "/comic-con"
+                },
+                {
+                    "name": "Summer Watch Guide",
+                    "url": "/summer-guide"
+                },
+                {
+                    "name": "Best Of So Far",
+                    "url": "/best-of"
+                },
+                {
+                    "name": "Disability Pride Month",
+                    "url": "/disability-pride"
+                },
+                {
+                    "name": "STARmeter Awards",
+                    "url": "/starmeter-awards"
+                },
+                {
+                    "name": "Awards Central",
+                    "url": "/awards-central"
+                },
+                {
+                    "name": "Festival Central",
+                    "url": "/festival-central"
+                },
+                {
+                    "name": "All Events",
+                    "url": "/events"
+                }
+            ]
+        },
+        {
+            "id": "celebs",
+            "name": "Celebs",
+            "icon": "https://brandeps.com/icon-download/P/People-icon-vector-03.svg",
+            "items": [
+                {
+                    "name": "Born Today",
+                    "url": "/birthdays"
+                },
+                {
+                    "name": "Most Popular Celebs",
+                    "url": "/chart/starmeter"
+                },
+                {
+                    "name": "Celebrity News",
+                    "url": "/news/celebrity"
+                }
+            ]
+        },
+        {
+            "id": "community",
+            "name": "Community",
+            "icon": "https://www.svgrepo.com/show/375240/world.svg",
+            "items": [
+                {
+                    "name": "Help Center",
+                    "url": "/help"
+                },
+                {
+                    "name": "Contributor Zone",
+                    "url": "/contributor-zone"
+                },
+                {
+                    "name": "Polls",
+                    "url": "/polls"
+                }
+            ]
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "firstName": "Admin",
+            "lastName": "User",
+            "email": "admin@example.com",
+            "phone": "+994501234567",
+            "password": "Admin123!",
+            "role": "super_admin",
+            "createdAt": "2025-01-01T00:00:00.000Z",
+            "isActive": true,
+            "lastLogin": null
+        }
+    ],
+    "swiper": [
+        {
+            "id": 1,
+            "title": "Glen Powell Is 'The Running Man",
+            "trailerDuration": "2:47",
+            "trailerUrl": "https://imdb-video.media-imdb.com/vi1122486297/1434659607842-pgv4ql-1751376199178.mp4?Expires=1751828963&Signature=lKc0q7fKt3VFlhKiPVnYmsMW3XUYT3PSoyM9gGbllRmLS3ENPoIXNPXXYozdp71qviAuENL~RmcJQ-~qo2jCDXNDm-6IrQZGS5mvxECknLW7DaCC5UmkJfQuvBaUwFnposocIOmaF2X6mCRXu5zNyd1er6aEUERixAbhxb96ljOEUh~xZvR3-Ly6BU6OkZYIWL8NR2~i-SWnu0rmDH79EPAltyCn1eGR-l0KDkPe1XJ39eod0h~VVDHQnHzcZ2hQJI8bHdl-U9OjWQsKhtFHluLkbaoy2MNYBc5j3IB-urPCLxiGERzaW6I~amlw9v15G~A4KvgIdglZRTU1LC3Zag__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA",
+            "description": "In a near-future society, The Running Man is the top-rated show on television—a deadly competition where contestants, known as Runners, must survive 30 days while being hunted by professional assassins, with every move broadcast to a bloodthirsty public and each day bringing a greater cash reward. Desperate to save his sick daughter, working-class Ben Richards (Glen Powell) is convinced by the show’s charming but ruthless producer, Dan Killian (Josh Brolin), to enter the game as a last resort. But Ben’s defiance, instincts, and grit turn him into an unexpected fan favorite—and a threat to the entire system. As ratings skyrocket, so does the danger, and Ben must outwit not just the Hunters, but a nation addicted to watching him fall.",
+            "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTczMzFjOTUtNGRlZS00MDM3LWExYjEtYWYxZDNmNzI2YTRmXkEyXkFqcGc@._V1_QL75_UX140_CR0,0,140,207_.jpg",
+            "trailerPosterUrl": "https://m.media-amazon.com/images/M/MV5BZTY4Zjk0MDMtZTM0Ny00YTI5LThiZDktZmVhNGY3NGNmY2I4XkEyXkFqcGc@._CR382,404,2503,1408_QL75_UX500_CR0,0,500,281_.jpg",
+            "likeCount": "1.1K",
+            "reactions": {
+                "count": 362,
+                "smile": 41,
+                "light": 38,
+                "love": 263,
+                "wow": 18
+            },
+            "writers": [
+                "Michael Bacall",
+                "Stephen King",
+                "Edgar Wright"
+            ],
+            "director": "Edgar Wright",
+            "production": "Expected November 7, 2025",
+            "actors": [
+                "Glen Powell",
+                "Josh Brolin",
+                "Michael Cera"
+            ],
+            "countWishlist": "54.2K",
+            "year": 2025,
+            "genre": [
+                "Dark Comedy",
+                "Dystopian Sci-Fi",
+                "Thriller",
+                "Action",
+                "Adventure",
+                "Sci-Fi"
+            ],
+            "videoCount": 1,
+            "photoCount": 9,
+            "preDescription": "A man joins a game show where contestants, allowed to go anywhere in the world, are pursued by 'hunters' hired to kill them."
+        },
+        {
+            "id": 2,
+            "title": "'Heads of State' Stars Take Our Big Bad Buddies Quiz",
+            "trailerDuration": "9:35",
+            "rate": 6.8,
+            "date": "Episode aired Jul 1, 2025",
+            "trailerUrl": "https://imdb-video.media-imdb.com/vi3471362073/1434659607842-pgv4ql-1751488391962.mp4?Expires=1751831032&Signature=tLkrFl1PLF1~cLQQZbgJRvReqbifQC80PoBxjt7CfPxcMK3bjdh1VPu~TEGpa2S70XCqTUofPlUhR78e0IqgUpJ6AwB3LGbjtfigi5WP0VVi3g2yjs0zX1X8HbVa1ZBGmaUcyyRbpAl~EScoMkc5qmNhP3ACKkJ~DObb7LDMExXo0ElhG-QwLgzep1OaYLHfXkYlcyeiWAAXsvGDHqo4F~xa12xNPM~i03nx9PWiEDL2Q~JE~ncBhwE-HEUH8dlAFFs6yVLWLzFOsBteAofVCsKRaDeDYdlgLcGA5NFUYTPwyo3rc6lGAIzL88mglU53WXF77sKUG4S3TCiHGZDTBw__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA",
+            "description": "The 'Heads of State' stars go head-to-head-to-head to test their knowledge of Buddy Action Comedy movies, like 'Midnight Run' (1988), 'Men in Black' (1997), 'Rush Hour' (1998), and more. John Cena plays U.S. President Rick Derringer, a former action movie star with more fans than respect, while Idris Elba is U.K. Prime Minister Sam Clarke, an embattled, former SAS-trained commando. The pair must work together after Air Force One crashes in hostile territory. Despite their characters finding common ground, IMDb pits these stars against one another to prove who knows the most about Big Bad Buddies.",
+            "posterUrl": "https://m.media-amazon.com/images/M/MV5BNTI3MDkzNjctOTY2Ni00ZTJiLWI5N2ItNDI2MzI4MWJlMTMyXkEyXkFqcGc@._V1_QL75_UX140_CR0,0,140,207_.jpg",
+            "postUrl": "https://m.media-amazon.com/images/M/MV5BMWFlZjRjNDktY2Y1Yi00ODNhLWFkODktMGJjMGM3ZTUyNDgwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+            "trailerPostUrl": "https://m.media-amazon.com/images/M/MV5BNTlhOGQwMTAtNmY2My00Zjk4LTkwNGMtZWY0ODViYjUxN2QyXkEyXkFqcGdeQWFsZWxvZw@@._V1_SY720_QL75_.jpg&quot",
+            "trailerPosterUrl": "https://m.media-amazon.com/images/M/MV5BMmFiOTFlNGUtMmQ0My00ZWQyLTk5NDgtMmEzN2MxMjQ1ZGIwXkEyXkFqcGdeQWFsZWxvZw@@._V1_QL40_QL75_UX500_CR0,0,500,281_.jpg",
+            "likeCount": "253",
+            "reactions": {
+                "count": 83,
+                "smile": 25,
+                "light": 7,
+                "love": 38,
+                "wow": 13
+            },
+            "genre": [
+                "Talk Show"
+            ],
+            "production": "Expected November 7, 2025",
+            "stars": [
+                "John Cena",
+                "Priyanka Chopra Jonas",
+                "Idris Elba"
+            ],
+            "videoCount": 2,
+            "photoCount": 2,
+            "preDescription": "'Heads of State' stars Idris Elba, Priyanka Chopra Jonas, and Idris Elba go head-to-head-to-head in the Big Bad Buddies Quiz on IMDb, testing their knowledge of Buddy Action Comedies. Plus, director Ilya Naishuller reveals on-set needs."
+        }
+    ],
+    "topFilms": [
+        {
+            "title": "The Shawshank Redemption",
+            "year": "1994",
+            "rating": "9.3",
+            "genres": [
+                "Epic",
+                "Period Drama",
+                "Prison Drama",
+                "Drama",
+                "Authentic emotion"
+            ],
+            "duration": "2 hours 22 minutes",
+            "director": "Frank Darabont",
+            "plot": "A banker convicted of uxoricide forms a friendship over a quarter century with a hardened convict, while maintaining his innocence and trying to remain hopeful through simple compassion.",
+            "poster_url": "https://m.media-amazon.com/images/M/MV5BMDAyY2FhYjctNDc5OS00MDNlLThiMGUtY2UxYWVkNGY2ZjljXkEyXkFqcGc@._V1_QL75_UX190_CR0,2,190,281_.jpg",
+            "imdb_url": "https://www.imdb.com/title/tt0111161/"
+        },
+        {
+            "title": "The Godfather",
+            "year": "1972",
+            "rating": "9.2",
+            "genres": [
+                "Epic",
+                "Gangster",
+                "Tragedy",
+                "Crime",
+                "Drama"
+            ],
+            "duration": "2 hours 55 minutes",
+            "director": "Lenny Montana",
+            "plot": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+            "poster_url": "https://m.media-amazon.com/images/M/MV5BNGEwYjgwOGQtYjg5ZS00Njc1LTk2ZGEtM2QwZWQ2NjdhZTE5XkEyXkFqcGc@._V1_QL75_UY281_CR4,0,190,281_.jpg",
+            "imdb_url": "https://www.imdb.com/title/tt0068646/"
+        },
+        {
+            "title": "The Dark Knight",
+            "year": "2008",
+            "rating": "9.0",
+            "genres": [
+                "Action Epic",
+                "Epic",
+                "Superhero",
+                "Tragedy",
+                "Action"
+            ],
+            "duration": "2 hours 32 minutes",
+            "director": "Christopher Nolan",
+            "plot": "When a menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman, James Gordon and Harvey Dent must work together to put an end to the madness.",
+            "poster_url": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_QL75_UX190_CR0,0,190,281_.jpg",
+            "imdb_url": "https://www.imdb.com/title/tt0468569/"
+        },
+        {
+            "title": "The Godfather Part II",
+            "year": "1974",
+            "rating": "9.0",
+            "genres": [
+                "Epic",
+                "Gangster",
+                "Tragedy",
+                "Crime",
+                "Drama"
+            ],
+            "duration": "3 hours 22 minutes",
+            "director": "Francis Ford Coppola",
+            "plot": "The early life and career of Vito Corleone in 1920s New York City is portrayed, while his son, Michael, expands and tightens his grip on the family crime syndicate.",
+            "poster_url": "https://m.media-amazon.com/images/M/MV5BMDIxMzBlZDktZjMxNy00ZGI4LTgxNDEtYWRlNzRjMjJmOGQ1XkEyXkFqcGc@._V1_QL75_UX190_CR0,2,190,281_.jpg",
+            "imdb_url": "https://www.imdb.com/title/tt0071562/"
+        },
+        {
+            "title": "12 Angry Men",
+            "year": "1957",
+            "rating": "9.0",
+            "genres": [
+                "Legal Drama",
+                "Psychological Drama",
+                "Crime",
+                "Drama",
+                "Authentic emotion"
+            ],
+            "duration": "1 hours 36 minutes",
+            "director": "Sidney Lumet",
+            "plot": "The jury in a New York City murder trial is frustrated by a single member whose skeptical caution forces them to more carefully consider the evidence before jumping to a hasty verdict.",
+            "poster_url": "https://m.media-amazon.com/images/M/MV5BYjE4NzdmOTYtYjc5Yi00YzBiLWEzNDEtNTgxZGQ2MWVkN2NiXkEyXkFqcGc@._V1_QL75_UX190_CR0,6,190,281_.jpg",
+            "imdb_url": "https://www.imdb.com/title/tt0050083/"
+        },
+        {
+            "title": "The Lord of the Rings: The Return of the King",
+            "year": "2003",
+            "rating": "9.0",
+            "genres": [
+                "Action Epic",
+                "Adventure Epic",
+                "Epic",
+                "Fantasy Epic",
+                "Mountain Adventure"
+            ],
+            "duration": "3 hours 21 minutes",
+            "director": "Peter Jackson",
+            "plot": "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.",
+            "poster_url": "https://m.media-amazon.com/images/M/MV5BMTZkMjBjNWMtZGI5OC00MGU0LTk4ZTItODg2NWM3NTVmNWQ4XkEyXkFqcGc@._V1_QL75_UX190_CR0,0,190,281_.jpg",
+            "imdb_url": "https://www.imdb.com/title/tt0167260/"
+        },
+        {
+            "title": "Schindler's List",
+            "year": "1993",
+            "rating": "9.0",
+            "genres": [
+                "Docudrama",
+                "Epic",
+                "Historical Epic",
+                "Period Drama",
+                "Prison Drama"
+            ],
+            "duration": "3 hours 15 minutes",
+            "director": "Steven Spielberg",
+            "plot": "In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.",
+            "poster_url": "https://m.media-amazon.com/images/M/MV5BNjM1ZDQxYWUtMzQyZS00MTE1LWJmZGYtNGUyNTdlYjM3ZmVmXkEyXkFqcGc@._V1_QL75_UX190_CR0,2,190,281_.jpg",
+            "imdb_url": "https://www.imdb.com/title/tt0108052/"
+        },
+        {
+            "title": "Pulp Fiction",
+            "year": "1994",
+            "rating": "8.8",
+            "genres": [
+                "Dark Comedy",
+                "Drug Crime",
+                "Gangster",
+                "Crime",
+                "Drama"
+            ],
+            "duration": "2 hours 34 minutes",
+            "director": "Quentin Tarantino",
+            "plot": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+            "poster_url": "https://m.media-amazon.com/images/M/MV5BYTViYTE3ZGQtNDBlMC00ZTAyLTkyODMtZGRiZDg0MjA2YThkXkEyXkFqcGc@._V1_QL75_UY281_CR2,0,190,281_.jpg",
+            "imdb_url": "https://www.imdb.com/title/tt0110912/"
+        },
+        {
+            "title": "The Lord of the Rings: The Fellowship of the Ring",
+            "year": "2001",
+            "rating": "8.9",
+            "genres": [
+                "Action Epic",
+                "Adventure Epic",
+                "Dark Fantasy",
+                "Epic",
+                "Fantasy Epic"
+            ],
+            "duration": "2 hours 58 minutes",
+            "director": "Peter Jackson",
+            "plot": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
+            "poster_url": "https://m.media-amazon.com/images/M/MV5BNzIxMDQ2YTctNDY4MC00ZTRhLTk4ODQtMTVlOWY4NTdiYmMwXkEyXkFqcGc@._V1_QL75_UX190_CR0,0,190,281_.jpg",
+            "imdb_url": "https://www.imdb.com/title/tt0120737/"
+        },
+        {
+            "title": "The Good, the Bad and the Ugly",
+            "year": "1966",
+            "rating": "8.8",
+            "genres": [
+                "Adventure Epic",
+                "Dark Comedy",
+                "Desert Adventure",
+                "Epic",
+                "Period Drama"
+            ],
+            "duration": "2 hours 58 minutes",
+            "director": "Sergio Leone",
+            "plot": "A bounty-hunting scam joins two men in an uneasy alliance against a third in a race to find a fortune in gold buried in a remote cemetery.",
+            "poster_url": "https://m.media-amazon.com/images/M/MV5BMWM5ZjQxM2YtNDlmYi00ZDNhLWI4MWUtN2VkYjBlMTY1ZTkwXkEyXkFqcGc@._V1_QL75_UX190_CR0,2,190,281_.jpg",
+            "imdb_url": "https://www.imdb.com/title/tt0060196/"
+        },
+        {
+            "title": "Forrest Gump",
+            "year": "1994",
+            "rating": "8.8",
+            "genres": [
+                "Epic",
+                "Drama",
+                "Romance",
+                "Comedic brilliance",
+                "Friendship"
+            ],
+            "duration": "2 hours 22 minutes",
+            "director": "Robert Zemeckis",
+            "plot": "The history of the United States from the 1950s to the '70s unfolds from the perspective of an Alabama man with an IQ of 75, who yearns to be reunited with his childhood sweetheart.",
+            "poster_url": "https://m.media-amazon.com/images/M/MV5BNDYwNzVjMTItZmU5YS00YjQ5LTljYjgtMjY2NDVmYWMyNWFmXkEyXkFqcGc@._V1_QL75_UY281_CR2,0,190,281_.jpg",
+            "imdb_url": "https://www.imdb.com/title/tt0109830/"
+        },
+        {
+            "title": "The Lord of the Rings: The Two Towers",
+            "year": "2002",
+            "rating": "8.8",
+            "genres": [
+                "Action Epic",
+                "Adventure Epic",
+                "Dark Fantasy",
+                "Epic",
+                "Fantasy Epic"
+            ],
+            "duration": "2 hours 59 minutes",
+            "director": "Peter Jackson",
+            "plot": "While Frodo and Sam edge closer to Mordor with the help of the shifty Gollum, the divided fellowship makes a stand against Sauron's new ally, Saruman, and his hordes of Isengard.",
+            "poster_url": "https://m.media-amazon.com/images/M/MV5BMGQxMDdiOWUtYjc1Ni00YzM1LWE2NjMtZTg3Y2JkMjEzMTJjXkEyXkFqcGc@._V1_QL75_UX190_CR0,7,190,281_.jpg",
+            "imdb_url": "https://www.imdb.com/title/tt0167261/"
+        },
+        {
+            "title": "Fight Club",
+            "year": "1999",
+            "rating": "8.8",
+            "genres": [
+                "Dark Comedy",
+                "Psychological Drama",
+                "Psychological Thriller",
+                "Workplace Drama",
+                "Crime"
+            ],
+            "duration": "2 hours 19 minutes",
+            "director": "David Fincher",
+            "plot": "An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.",
+            "poster_url": "https://m.media-amazon.com/images/M/MV5BOTgyOGQ1NDItNGU3Ny00MjU3LTg2YWEtNmEyYjBiMjI1Y2M5XkEyXkFqcGc@._V1_QL75_UX190_CR0,2,190,281_.jpg",
+            "imdb_url": "https://www.imdb.com/title/tt0137523/"
+        },
+        {
+            "title": "Inception",
+            "year": "2010",
+            "rating": "8.8",
+            "genres": [
+                "Action Epic",
+                "Adventure Epic",
+                "Epic",
+                "Psychological Thriller",
+                "Sci-Fi Epic"
+            ],
+            "duration": "2 hours 28 minutes",
+            "director": "Christopher Nolan",
+            "plot": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
+            "poster_url": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_QL75_UX190_CR0,0,190,281_.jpg",
+            "imdb_url": "https://www.imdb.com/title/tt1375666/"
+        },
+        {
+            "title": "Star Wars: Episode V - The Empire Strikes Back",
+            "year": "1980",
+            "rating": "8.7",
+            "genres": [
+                "Action Epic",
+                "Adventure Epic",
+                "Dark Fantasy",
+                "Dystopian Sci-Fi",
+                "Epic"
+            ],
+            "duration": "2 hours 4 minutes",
+            "director": "Irvin Kershner",
+            "plot": "After the Empire overpowers the Rebel Alliance, Luke Skywalker begins training with Jedi Master Yoda, while Darth Vader and bounty hunter Boba Fett pursue his friends across the galaxy.",
+            "poster_url": "https://m.media-amazon.com/images/M/MV5BMTkxNGFlNDktZmJkNC00MDdhLTg0MTEtZjZiYWI3MGE5NWIwXkEyXkFqcGc@._V1_QL75_UX190_CR0,7,190,281_.jpg",
+            "imdb_url": "https://www.imdb.com/title/tt0080684/"
+        },
+        {
+            "title": "The Matrix",
+            "year": "1999",
+            "rating": "8.7",
+            "genres": [
+                "Action Epic",
+                "Artificial Intelligence",
+                "Cyberpunk",
+                "Dystopian Sci-Fi",
+                "Gun Fu"
+            ],
+            "duration": "2 hours 16 minutes",
+            "director": "Lana Wachowski & Lilly Wachowskil",
+            "plot": "When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.",
+            "poster_url": "https://m.media-amazon.com/images/M/MV5BN2NmN2VhMTQtMDNiOS00NDlhLTliMjgtODE2ZTY0ODQyNDRhXkEyXkFqcGc@._V1_QL75_UX190_CR0,2,190,281_.jpg",
+            "imdb_url": "https://www.imdb.com/title/tt0133093/"
+        },
+        {
+            "title": "Goodfellas",
+            "year": "1990",
+            "rating": "8.7",
+            "genres": [
+                "Docudrama",
+                "Gangster",
+                "True Crime",
+                "Biography",
+                "Crime"
+            ],
+            "duration": "2 hours 25 minutes",
+            "director": "Martin Scorsese",
+            "plot": "The story of Henry Hill and his life in the mafia, covering his relationship with his wife Karen and his mob partners Jimmy Conway and Tommy DeVito.",
+            "poster_url": "https://m.media-amazon.com/images/M/MV5BN2E5NzI2ZGMtY2VjNi00YTRjLWI1MDUtZGY5OWU1MWJjZjRjXkEyXkFqcGc@._V1_QL75_UX190_CR0,2,190,281_.jpg",
+            "imdb_url": "https://www.imdb.com/title/tt0099685/"
+        },
+        {
+            "title": "Interstellar",
+            "year": "2014",
+            "rating": "8.7",
+            "genres": [
+                "Adventure Epic",
+                "Epic",
+                "Psychological Drama",
+                "Quest",
+                "Sci-Fi Epic"
+            ],
+            "duration": "2 hours 49 minutes",
+            "director": "Kip Thorne",
+            "plot": "When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.",
+            "poster_url": "https://m.media-amazon.com/images/M/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5ZDJlYWY3XkEyXkFqcGc@._V1_QL75_UX190_CR0,0,190,281_.jpg",
+            "imdb_url": "https://www.imdb.com/title/tt0816692/"
+        },
+        {
+            "title": "One Flew Over the Cuckoo's Nest",
+            "year": "1975",
+            "rating": "8.7",
+            "genres": [
+                "Medical Drama",
+                "Psychological Drama",
+                "Drama",
+                "Freedom",
+                "Iconic performance"
+            ],
+            "duration": "2 hours 13 minutes",
+            "director": "Milos Forman",
+            "plot": "A rebellious convict is sent to a psychiatric hospital for evaluation in 1963 Oregon, and encourages his docile companions to take more control of their lives and defy the tyrannical head nurse.",
+            "poster_url": "https://m.media-amazon.com/images/M/MV5BYjBkMjgzMzYtNzRiMS00NDc3LWE4YTUtZjYxYjZhNjNhYzhhXkEyXkFqcGc@._V1_QL75_UX190_CR0,0,190,281_.jpg",
+            "imdb_url": "https://www.imdb.com/title/tt0073486/"
+        },
+        {
+            "title": "Se7en",
+            "year": "1995",
+            "rating": "8.6",
+            "genres": [
+                "Cop Drama",
+                "Hard-boiled Detective",
+                "Police Procedural",
+                "Psychological Drama",
+                "Psychological Thriller"
+            ],
+            "duration": "2 hours 7 minutes",
+            "director": "David Fincher",
+            "plot": "Two detectives, a rookie and a veteran, hunt a serial killer who uses the seven deadly sins as his motives.",
+            "poster_url": "https://m.media-amazon.com/images/M/MV5BY2IzNzMxZjctZjUxZi00YzAxLTk3ZjMtODFjODdhMDU5NDM1XkEyXkFqcGc@._V1_QL75_UX190_CR0,8,190,281_.jpg",
+            "imdb_url": "https://www.imdb.com/title/tt0114369/"
+        },
+        {
+            "title": "It's a Wonderful Life",
+            "year": "1946",
+            "rating": "8.6",
+            "genres": [
+                "Feel-Good Romance",
+                "Holiday Family",
+                "Holiday Romance",
+                "Psychological Drama",
+                "Supernatural Fantasy"
+            ],
+            "duration": "2 hours 10 minutes",
+            "director": "Donna Reed",
+            "plot": "An angel is sent from Heaven to help a desperately frustrated businessman by showing him what life would have been like if he had never existed.",
+            "poster_url": "https://m.media-amazon.com/images/M/MV5BMDM4OWFhYjEtNTE5Yy00NjcyLTg5N2UtZDQwNDZlYjlmNDU5XkEyXkFqcGc@._V1_QL75_UY281_CR2,0,190,281_.jpg",
+            "imdb_url": "https://www.imdb.com/title/tt0038650/"
+        },
+        {
+            "title": "The Silence of the Lambs",
+            "year": "1991",
+            "rating": "8.6",
+            "genres": [
+                "Police Procedural",
+                "Psychological Drama",
+                "Psychological Horror",
+                "Psychological Thriller",
+                "Serial Killer"
+            ],
+            "duration": "1 hours 58 minutes",
+            "director": "Roger Corman",
+            "plot": "A young F.B.I. cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a madman who skins his victims.",
+            "poster_url": "https://m.media-amazon.com/images/M/MV5BNDdhOGJhYzctYzYwZC00YmI2LWI0MjctYjg4ODdlMDExYjBlXkEyXkFqcGc@._V1_QL75_UY281_CR0,0,190,281_.jpg",
+            "imdb_url": "https://www.imdb.com/title/tt0102926/"
+        },
+        {
+            "title": "Seven Samurai",
+            "year": "1954",
+            "rating": "8.6",
+            "genres": [
+                "Action Epic",
+                "Epic",
+                "Period Drama",
+                "Samurai",
+                "Action"
+            ],
+            "duration": "3 hours 27 minutes",
+            "director": "Akira Kurosawa",
+            "plot": "Farmers from a village exploited by bandits hire a veteran samurai for protection, and he gathers six other samurai to join him.",
+            "poster_url": "https://m.media-amazon.com/images/M/MV5BZjliMWExOTMtZDQ3ZS00NWU3LWIyN2EtMjllNzk3ZTNlYzg4XkEyXkFqcGc@._V1_QL75_UY281_CR5,0,190,281_.jpg",
+            "imdb_url": "https://www.imdb.com/title/tt0047478/"
+        },
+        {
+            "title": "Saving Private Ryan",
+            "year": "1998",
+            "rating": "8.6",
+            "genres": [
+                "Epic",
+                "Period Drama",
+                "War Epic",
+                "Drama",
+                "War"
+            ],
+            "duration": "2 hours 49 minutes",
+            "director": "Steven Spielberg",
+            "plot": "Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose comrades have been killed in action.",
+            "poster_url": "https://m.media-amazon.com/images/M/MV5BZGZhZGQ1ZWUtZTZjYS00MDJhLWFkYjctN2ZlYjE5NWYwZDM2XkEyXkFqcGc@._V1_QL75_UY281_CR1,0,190,281_.jpg",
+            "imdb_url": "https://www.imdb.com/title/tt0120815/"
+        },
+        {
+            "title": "The Green Mile",
+            "year": "1999",
+            "rating": "8.6",
+            "genres": [
+                "Period Drama",
+                "Prison Drama",
+                "Supernatural Fantasy",
+                "Tragedy",
+                "Crime"
+            ],
+            "duration": "3 hours 9 minutes",
+            "director": "Frank Darabont",
+            "plot": "A death row guard learns that a gentle giant in his charge possesses a mysterious gift.",
+            "poster_url": "https://m.media-amazon.com/images/M/MV5BMTUxMzQyNjA5MF5BMl5BanBnXkFtZTYwOTU2NTY3._V1_QL75_UX190_CR0,0,190,281_.jpg",
+            "imdb_url": "https://www.imdb.com/title/tt0120689/"
+        }
+    ]
+}
