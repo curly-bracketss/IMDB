@@ -281,6 +281,15 @@
     "topFilms": [
         {
             "title": "The Shawshank Redemption",
+            "writers": [
+                "Stephen King",
+                "Frank Darabont"
+            ],
+            "actors": [
+                "Tim Robbins",
+                "Morgan Freeman",
+                "Bob Gunton"
+            ],
             "year": "1994",
             "rating": "9.3",
             "genres": [
@@ -290,14 +299,35 @@
                 "Drama",
                 "Authentic emotion"
             ],
-            "duration": "2 hours 22 minutes",
+            "duration": "2h 22m",
             "director": "Frank Darabont",
-            "plot": "A banker convicted of uxoricide forms a friendship over a quarter century with a hardened convict, while maintaining his innocence and trying to remain hopeful through simple compassion.",
-            "poster_url": "https://m.media-amazon.com/images/M/MV5BMDAyY2FhYjctNDc5OS00MDNlLThiMGUtY2UxYWVkNGY2ZjljXkEyXkFqcGc@._V1_QL75_UX190_CR0,2,190,281_.jpg",
-            "imdb_url": "https://www.imdb.com/title/tt0111161/"
+            "likeCount": 253,
+            "reactions": {
+                "count": 83,
+                "smile": 25,
+                "light": 7,
+                "love": 38,
+                "wow": 13
+            },
+            "production": "Expected November 7, 2025",
+            "videoCount": 1,
+            "photoCount": 1,
+            "description": "A banker convicted of uxoricide forms a friendship over a quarter century with a hardened convict, while maintaining his innocence and trying to remain hopeful through simple compassion.",
+            "countWishlist": 54200,
+            "posterUrl": "https://m.media-amazon.com/images/M/MV5BMDAyY2FhYjctNDc5OS00MDNlLThiMGUtY2UxYWVkNGY2ZjljXkEyXkFqcGc@._V1_QL75_UX190_CR0,2,190,281_.jpg",
+            "id": "0111161"
         },
         {
             "title": "The Godfather",
+            "writers": [
+                "Mario Puzo",
+                "Francis Ford Coppola"
+            ],
+            "actors": [
+                "Marlon Brando",
+                "Al Pacino",
+                "James Caan"
+            ],
             "year": "1972",
             "rating": "9.2",
             "genres": [
@@ -307,14 +337,36 @@
                 "Crime",
                 "Drama"
             ],
-            "duration": "2 hours 55 minutes",
+            "duration": "2h 55m",
             "director": "Lenny Montana",
-            "plot": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
-            "poster_url": "https://m.media-amazon.com/images/M/MV5BNGEwYjgwOGQtYjg5ZS00Njc1LTk2ZGEtM2QwZWQ2NjdhZTE5XkEyXkFqcGc@._V1_QL75_UY281_CR4,0,190,281_.jpg",
-            "imdb_url": "https://www.imdb.com/title/tt0068646/"
+            "likeCount": 253,
+            "reactions": {
+                "count": 83,
+                "smile": 25,
+                "light": 7,
+                "love": 38,
+                "wow": 13
+            },
+            "production": "Expected November 7, 2025",
+            "videoCount": 1,
+            "photoCount": 1,
+            "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+            "countWishlist": 54200,
+            "posterUrl": "https://m.media-amazon.com/images/M/MV5BNGEwYjgwOGQtYjg5ZS00Njc1LTk2ZGEtM2QwZWQ2NjdhZTE5XkEyXkFqcGc@._V1_QL75_UY281_CR4,0,190,281_.jpg",
+            "id": "0068646"
         },
         {
             "title": "The Dark Knight",
+            "writers": [
+                "Jonathan Nolan",
+                "Christopher Nolan",
+                "David S. Goyer"
+            ],
+            "actors": [
+                "Christian Bale",
+                "Heath Ledger",
+                "Aaron Eckhart"
+            ],
             "year": "2008",
             "rating": "9.0",
             "genres": [
@@ -324,14 +376,35 @@
                 "Tragedy",
                 "Action"
             ],
-            "duration": "2 hours 32 minutes",
+            "duration": "2h 32m",
             "director": "Christopher Nolan",
-            "plot": "When a menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman, James Gordon and Harvey Dent must work together to put an end to the madness.",
-            "poster_url": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_QL75_UX190_CR0,0,190,281_.jpg",
-            "imdb_url": "https://www.imdb.com/title/tt0468569/"
+            "likeCount": 253,
+            "reactions": {
+                "count": 83,
+                "smile": 25,
+                "light": 7,
+                "love": 38,
+                "wow": 13
+            },
+            "production": "Expected November 7, 2025",
+            "videoCount": 1,
+            "photoCount": 1,
+            "description": "When a menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman, James Gordon and Harvey Dent must work together to put an end to the madness.",
+            "countWishlist": 54200,
+            "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_QL75_UX190_CR0,0,190,281_.jpg",
+            "id": "0468569"
         },
         {
             "title": "The Godfather Part II",
+            "writers": [
+                "Francis Ford Coppola",
+                "Mario Puzo"
+            ],
+            "actors": [
+                "Al Pacino",
+                "Robert De Niro",
+                "Robert Duvall"
+            ],
             "year": "1974",
             "rating": "9.0",
             "genres": [
@@ -341,14 +414,34 @@
                 "Crime",
                 "Drama"
             ],
-            "duration": "3 hours 22 minutes",
+            "duration": "3h 22m",
             "director": "Francis Ford Coppola",
-            "plot": "The early life and career of Vito Corleone in 1920s New York City is portrayed, while his son, Michael, expands and tightens his grip on the family crime syndicate.",
-            "poster_url": "https://m.media-amazon.com/images/M/MV5BMDIxMzBlZDktZjMxNy00ZGI4LTgxNDEtYWRlNzRjMjJmOGQ1XkEyXkFqcGc@._V1_QL75_UX190_CR0,2,190,281_.jpg",
-            "imdb_url": "https://www.imdb.com/title/tt0071562/"
+            "likeCount": 253,
+            "reactions": {
+                "count": 83,
+                "smile": 25,
+                "light": 7,
+                "love": 38,
+                "wow": 13
+            },
+            "production": "Expected November 7, 2025",
+            "videoCount": 1,
+            "photoCount": 1,
+            "description": "The early life and career of Vito Corleone in 1920s New York City is portrayed, while his son, Michael, expands and tightens his grip on the family crime syndicate.",
+            "countWishlist": 54200,
+            "posterUrl": "https://m.media-amazon.com/images/M/MV5BMDIxMzBlZDktZjMxNy00ZGI4LTgxNDEtYWRlNzRjMjJmOGQ1XkEyXkFqcGc@._V1_QL75_UX190_CR0,2,190,281_.jpg",
+            "id": "0071562"
         },
         {
             "title": "12 Angry Men",
+            "writers": [
+                "Reginald Rose"
+            ],
+            "actors": [
+                "Henry Fonda",
+                "Lee J. Cobb",
+                "Martin Balsam"
+            ],
             "year": "1957",
             "rating": "9.0",
             "genres": [
@@ -358,14 +451,37 @@
                 "Drama",
                 "Authentic emotion"
             ],
-            "duration": "1 hours 36 minutes",
+            "duration": "1h 36m",
             "director": "Sidney Lumet",
-            "plot": "The jury in a New York City murder trial is frustrated by a single member whose skeptical caution forces them to more carefully consider the evidence before jumping to a hasty verdict.",
-            "poster_url": "https://m.media-amazon.com/images/M/MV5BYjE4NzdmOTYtYjc5Yi00YzBiLWEzNDEtNTgxZGQ2MWVkN2NiXkEyXkFqcGc@._V1_QL75_UX190_CR0,6,190,281_.jpg",
-            "imdb_url": "https://www.imdb.com/title/tt0050083/"
+            "likeCount": 253,
+            "reactions": {
+                "count": 83,
+                "smile": 25,
+                "light": 7,
+                "love": 38,
+                "wow": 13
+            },
+            "production": "Expected November 7, 2025",
+            "videoCount": 1,
+            "photoCount": 1,
+            "description": "The jury in a New York City murder trial is frustrated by a single member whose skeptical caution forces them to more carefully consider the evidence before jumping to a hasty verdict.",
+            "countWishlist": 54200,
+            "posterUrl": "https://m.media-amazon.com/images/M/MV5BYjE4NzdmOTYtYjc5Yi00YzBiLWEzNDEtNTgxZGQ2MWVkN2NiXkEyXkFqcGc@._V1_QL75_UX190_CR0,6,190,281_.jpg",
+            "id": "0050083"
         },
         {
             "title": "The Lord of the Rings: The Return of the King",
+            "writers": [
+                "J.R.R. Tolkien",
+                "Fran Walsh",
+                "Philippa Boyens",
+                "Peter Jackson"
+            ],
+            "actors": [
+                "Elijah Wood",
+                "Viggo Mortensen",
+                "Ian McKellen"
+            ],
             "year": "2003",
             "rating": "9.0",
             "genres": [
@@ -375,14 +491,35 @@
                 "Fantasy Epic",
                 "Mountain Adventure"
             ],
-            "duration": "3 hours 21 minutes",
+            "duration": "3h 21m",
             "director": "Peter Jackson",
-            "plot": "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.",
-            "poster_url": "https://m.media-amazon.com/images/M/MV5BMTZkMjBjNWMtZGI5OC00MGU0LTk4ZTItODg2NWM3NTVmNWQ4XkEyXkFqcGc@._V1_QL75_UX190_CR0,0,190,281_.jpg",
-            "imdb_url": "https://www.imdb.com/title/tt0167260/"
+            "likeCount": 253,
+            "reactions": {
+                "count": 83,
+                "smile": 25,
+                "light": 7,
+                "love": 38,
+                "wow": 13
+            },
+            "production": "Expected November 7, 2025",
+            "videoCount": 1,
+            "photoCount": 1,
+            "description": "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.",
+            "countWishlist": 54200,
+            "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTZkMjBjNWMtZGI5OC00MGU0LTk4ZTItODg2NWM3NTVmNWQ4XkEyXkFqcGc@._V1_QL75_UX190_CR0,0,190,281_.jpg",
+            "id": "0167260"
         },
         {
             "title": "Schindler's List",
+            "writers": [
+                "Thomas Keneally",
+                "Steven Zaillian"
+            ],
+            "actors": [
+                "Liam Neeson",
+                "Ralph Fiennes",
+                "Ben Kingsley"
+            ],
             "year": "1993",
             "rating": "9.0",
             "genres": [
@@ -392,14 +529,35 @@
                 "Period Drama",
                 "Prison Drama"
             ],
-            "duration": "3 hours 15 minutes",
+            "duration": "3h 15m",
             "director": "Steven Spielberg",
-            "plot": "In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.",
-            "poster_url": "https://m.media-amazon.com/images/M/MV5BNjM1ZDQxYWUtMzQyZS00MTE1LWJmZGYtNGUyNTdlYjM3ZmVmXkEyXkFqcGc@._V1_QL75_UX190_CR0,2,190,281_.jpg",
-            "imdb_url": "https://www.imdb.com/title/tt0108052/"
+            "likeCount": 253,
+            "reactions": {
+                "count": 83,
+                "smile": 25,
+                "light": 7,
+                "love": 38,
+                "wow": 13
+            },
+            "production": "Expected November 7, 2025",
+            "videoCount": 1,
+            "photoCount": 1,
+            "description": "In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.",
+            "countWishlist": 54200,
+            "posterUrl": "https://m.media-amazon.com/images/M/MV5BNjM1ZDQxYWUtMzQyZS00MTE1LWJmZGYtNGUyNTdlYjM3ZmVmXkEyXkFqcGc@._V1_QL75_UX190_CR0,2,190,281_.jpg",
+            "id": "0108052"
         },
         {
             "title": "Pulp Fiction",
+            "writers": [
+                "Quentin Tarantino",
+                "Roger Avary"
+            ],
+            "actors": [
+                "John Travolta",
+                "Uma Thurman",
+                "Samuel L. Jackson"
+            ],
             "year": "1994",
             "rating": "8.8",
             "genres": [
@@ -409,14 +567,37 @@
                 "Crime",
                 "Drama"
             ],
-            "duration": "2 hours 34 minutes",
+            "duration": "2h 34m",
             "director": "Quentin Tarantino",
-            "plot": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
-            "poster_url": "https://m.media-amazon.com/images/M/MV5BYTViYTE3ZGQtNDBlMC00ZTAyLTkyODMtZGRiZDg0MjA2YThkXkEyXkFqcGc@._V1_QL75_UY281_CR2,0,190,281_.jpg",
-            "imdb_url": "https://www.imdb.com/title/tt0110912/"
+            "likeCount": 253,
+            "reactions": {
+                "count": 83,
+                "smile": 25,
+                "light": 7,
+                "love": 38,
+                "wow": 13
+            },
+            "production": "Expected November 7, 2025",
+            "videoCount": 1,
+            "photoCount": 1,
+            "description": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+            "countWishlist": 54200,
+            "posterUrl": "https://m.media-amazon.com/images/M/MV5BYTViYTE3ZGQtNDBlMC00ZTAyLTkyODMtZGRiZDg0MjA2YThkXkEyXkFqcGc@._V1_QL75_UY281_CR2,0,190,281_.jpg",
+            "id": "0110912"
         },
         {
             "title": "The Lord of the Rings: The Fellowship of the Ring",
+            "writers": [
+                "J.R.R. Tolkien",
+                "Fran Walsh",
+                "Philippa Boyens",
+                "Peter Jackson"
+            ],
+            "actors": [
+                "Elijah Wood",
+                "Ian McKellen",
+                "Orlando Bloom"
+            ],
             "year": "2001",
             "rating": "8.9",
             "genres": [
@@ -426,14 +607,37 @@
                 "Epic",
                 "Fantasy Epic"
             ],
-            "duration": "2 hours 58 minutes",
+            "duration": "2h 58m",
             "director": "Peter Jackson",
-            "plot": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
-            "poster_url": "https://m.media-amazon.com/images/M/MV5BNzIxMDQ2YTctNDY4MC00ZTRhLTk4ODQtMTVlOWY4NTdiYmMwXkEyXkFqcGc@._V1_QL75_UX190_CR0,0,190,281_.jpg",
-            "imdb_url": "https://www.imdb.com/title/tt0120737/"
+            "likeCount": 253,
+            "reactions": {
+                "count": 83,
+                "smile": 25,
+                "light": 7,
+                "love": 38,
+                "wow": 13
+            },
+            "production": "Expected November 7, 2025",
+            "videoCount": 1,
+            "photoCount": 1,
+            "description": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
+            "countWishlist": 54200,
+            "posterUrl": "https://m.media-amazon.com/images/M/MV5BNzIxMDQ2YTctNDY4MC00ZTRhLTk4ODQtMTVlOWY4NTdiYmMwXkEyXkFqcGc@._V1_QL75_UX190_CR0,0,190,281_.jpg",
+            "id": "0120737"
         },
         {
             "title": "The Good, the Bad and the Ugly",
+            "writers": [
+                "Luciano Vincenzoni",
+                "Sergio Leone",
+                "Agenore Incrocci",
+                "Furio Scarpelli"
+            ],
+            "actors": [
+                "Clint Eastwood",
+                "Eli Wallach",
+                "Lee Van Cleef"
+            ],
             "year": "1966",
             "rating": "8.8",
             "genres": [
@@ -443,14 +647,35 @@
                 "Epic",
                 "Period Drama"
             ],
-            "duration": "2 hours 58 minutes",
+            "duration": "2h 58m",
             "director": "Sergio Leone",
-            "plot": "A bounty-hunting scam joins two men in an uneasy alliance against a third in a race to find a fortune in gold buried in a remote cemetery.",
-            "poster_url": "https://m.media-amazon.com/images/M/MV5BMWM5ZjQxM2YtNDlmYi00ZDNhLWI4MWUtN2VkYjBlMTY1ZTkwXkEyXkFqcGc@._V1_QL75_UX190_CR0,2,190,281_.jpg",
-            "imdb_url": "https://www.imdb.com/title/tt0060196/"
+            "likeCount": 253,
+            "reactions": {
+                "count": 83,
+                "smile": 25,
+                "light": 7,
+                "love": 38,
+                "wow": 13
+            },
+            "production": "Expected November 7, 2025",
+            "videoCount": 1,
+            "photoCount": 1,
+            "description": "A bounty-hunting scam joins two men in an uneasy alliance against a third in a race to find a fortune in gold buried in a remote cemetery.",
+            "countWishlist": 54200,
+            "posterUrl": "https://m.media-amazon.com/images/M/MV5BMWM5ZjQxM2YtNDlmYi00ZDNhLWI4MWUtN2VkYjBlMTY1ZTkwXkEyXkFqcGc@._V1_QL75_UX190_CR0,2,190,281_.jpg",
+            "id": "0060196"
         },
         {
             "title": "Forrest Gump",
+            "writers": [
+                "Winston Groom",
+                "Eric Roth"
+            ],
+            "actors": [
+                "Tom Hanks",
+                "Robin Wright",
+                "Gary Sinise"
+            ],
             "year": "1994",
             "rating": "8.8",
             "genres": [
@@ -460,14 +685,38 @@
                 "Comedic brilliance",
                 "Friendship"
             ],
-            "duration": "2 hours 22 minutes",
+            "duration": "2h 22m",
             "director": "Robert Zemeckis",
-            "plot": "The history of the United States from the 1950s to the '70s unfolds from the perspective of an Alabama man with an IQ of 75, who yearns to be reunited with his childhood sweetheart.",
-            "poster_url": "https://m.media-amazon.com/images/M/MV5BNDYwNzVjMTItZmU5YS00YjQ5LTljYjgtMjY2NDVmYWMyNWFmXkEyXkFqcGc@._V1_QL75_UY281_CR2,0,190,281_.jpg",
-            "imdb_url": "https://www.imdb.com/title/tt0109830/"
+            "likeCount": 253,
+            "reactions": {
+                "count": 83,
+                "smile": 25,
+                "light": 7,
+                "love": 38,
+                "wow": 13
+            },
+            "production": "Expected November 7, 2025",
+            "videoCount": 1,
+            "photoCount": 1,
+            "description": "The history of the United States from the 1950s to the '70s unfolds from the perspective of an Alabama man with an IQ of 75, who yearns to be reunited with his childhood sweetheart.",
+            "countWishlist": 54200,
+            "posterUrl": "https://m.media-amazon.com/images/M/MV5BNDYwNzVjMTItZmU5YS00YjQ5LTljYjgtMjY2NDVmYWMyNWFmXkEyXkFqcGc@._V1_QL75_UY281_CR2,0,190,281_.jpg",
+            "id": "0109830"
         },
         {
             "title": "The Lord of the Rings: The Two Towers",
+            "writers": [
+                "J.R.R. Tolkien",
+                "Fran Walsh",
+                "Philippa Boyens",
+                "Stephen Sinclair",
+                "Peter Jackson"
+            ],
+            "actors": [
+                "Elijah Wood",
+                "Viggo Mortensen",
+                "Ian McKellen"
+            ],
             "year": "2002",
             "rating": "8.8",
             "genres": [
@@ -477,14 +726,35 @@
                 "Epic",
                 "Fantasy Epic"
             ],
-            "duration": "2 hours 59 minutes",
+            "duration": "2h 59m",
             "director": "Peter Jackson",
-            "plot": "While Frodo and Sam edge closer to Mordor with the help of the shifty Gollum, the divided fellowship makes a stand against Sauron's new ally, Saruman, and his hordes of Isengard.",
-            "poster_url": "https://m.media-amazon.com/images/M/MV5BMGQxMDdiOWUtYjc1Ni00YzM1LWE2NjMtZTg3Y2JkMjEzMTJjXkEyXkFqcGc@._V1_QL75_UX190_CR0,7,190,281_.jpg",
-            "imdb_url": "https://www.imdb.com/title/tt0167261/"
+            "likeCount": 253,
+            "reactions": {
+                "count": 83,
+                "smile": 25,
+                "light": 7,
+                "love": 38,
+                "wow": 13
+            },
+            "production": "Expected November 7, 2025",
+            "videoCount": 1,
+            "photoCount": 1,
+            "description": "While Frodo and Sam edge closer to Mordor with the help of the shifty Gollum, the divided fellowship makes a stand against Sauron's new ally, Saruman, and his hordes of Isengard.",
+            "countWishlist": 54200,
+            "posterUrl": "https://m.media-amazon.com/images/M/MV5BMGQxMDdiOWUtYjc1Ni00YzM1LWE2NjMtZTg3Y2JkMjEzMTJjXkEyXkFqcGc@._V1_QL75_UX190_CR0,7,190,281_.jpg",
+            "id": "0167261"
         },
         {
             "title": "Fight Club",
+            "writers": [
+                "Chuck Palahniuk",
+                "Jim Uhls"
+            ],
+            "actors": [
+                "Brad Pitt",
+                "Edward Norton",
+                "Helena Bonham Carter"
+            ],
             "year": "1999",
             "rating": "8.8",
             "genres": [
@@ -494,14 +764,34 @@
                 "Workplace Drama",
                 "Crime"
             ],
-            "duration": "2 hours 19 minutes",
+            "duration": "2h 19m",
             "director": "David Fincher",
-            "plot": "An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.",
-            "poster_url": "https://m.media-amazon.com/images/M/MV5BOTgyOGQ1NDItNGU3Ny00MjU3LTg2YWEtNmEyYjBiMjI1Y2M5XkEyXkFqcGc@._V1_QL75_UX190_CR0,2,190,281_.jpg",
-            "imdb_url": "https://www.imdb.com/title/tt0137523/"
+            "likeCount": 253,
+            "reactions": {
+                "count": 83,
+                "smile": 25,
+                "light": 7,
+                "love": 38,
+                "wow": 13
+            },
+            "production": "Expected November 7, 2025",
+            "videoCount": 1,
+            "photoCount": 1,
+            "description": "An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.",
+            "countWishlist": 54200,
+            "posterUrl": "https://m.media-amazon.com/images/M/MV5BOTgyOGQ1NDItNGU3Ny00MjU3LTg2YWEtNmEyYjBiMjI1Y2M5XkEyXkFqcGc@._V1_QL75_UX190_CR0,2,190,281_.jpg",
+            "id": "0137523"
         },
         {
             "title": "Inception",
+            "writers": [
+                "Christopher Nolan"
+            ],
+            "actors": [
+                "Leonardo DiCaprio",
+                "Joseph Gordon-Levitt",
+                "Elliot Page"
+            ],
             "year": "2010",
             "rating": "8.8",
             "genres": [
@@ -511,14 +801,36 @@
                 "Psychological Thriller",
                 "Sci-Fi Epic"
             ],
-            "duration": "2 hours 28 minutes",
+            "duration": "2h 28m",
             "director": "Christopher Nolan",
-            "plot": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
-            "poster_url": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_QL75_UX190_CR0,0,190,281_.jpg",
-            "imdb_url": "https://www.imdb.com/title/tt1375666/"
+            "likeCount": 253,
+            "reactions": {
+                "count": 83,
+                "smile": 25,
+                "light": 7,
+                "love": 38,
+                "wow": 13
+            },
+            "production": "Expected November 7, 2025",
+            "videoCount": 1,
+            "photoCount": 1,
+            "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
+            "countWishlist": 54200,
+            "posterUrl": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_QL75_UX190_CR0,0,190,281_.jpg",
+            "id": "1375666"
         },
         {
             "title": "Star Wars: Episode V - The Empire Strikes Back",
+            "writers": [
+                "Leigh Brackett",
+                "Lawrence Kasdan",
+                "George Lucas"
+            ],
+            "actors": [
+                "Mark Hamill",
+                "Harrison Ford",
+                "Carrie Fisher"
+            ],
             "year": "1980",
             "rating": "8.7",
             "genres": [
@@ -528,14 +840,35 @@
                 "Dystopian Sci-Fi",
                 "Epic"
             ],
-            "duration": "2 hours 4 minutes",
+            "duration": "2h 4m",
             "director": "Irvin Kershner",
-            "plot": "After the Empire overpowers the Rebel Alliance, Luke Skywalker begins training with Jedi Master Yoda, while Darth Vader and bounty hunter Boba Fett pursue his friends across the galaxy.",
-            "poster_url": "https://m.media-amazon.com/images/M/MV5BMTkxNGFlNDktZmJkNC00MDdhLTg0MTEtZjZiYWI3MGE5NWIwXkEyXkFqcGc@._V1_QL75_UX190_CR0,7,190,281_.jpg",
-            "imdb_url": "https://www.imdb.com/title/tt0080684/"
+            "likeCount": 253,
+            "reactions": {
+                "count": 83,
+                "smile": 25,
+                "light": 7,
+                "love": 38,
+                "wow": 13
+            },
+            "production": "Expected November 7, 2025",
+            "videoCount": 1,
+            "photoCount": 1,
+            "description": "After the Empire overpowers the Rebel Alliance, Luke Skywalker begins training with Jedi Master Yoda, while Darth Vader and bounty hunter Boba Fett pursue his friends across the galaxy.",
+            "countWishlist": 54200,
+            "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTkxNGFlNDktZmJkNC00MDdhLTg0MTEtZjZiYWI3MGE5NWIwXkEyXkFqcGc@._V1_QL75_UX190_CR0,7,190,281_.jpg",
+            "id": "0080684"
         },
         {
             "title": "The Matrix",
+            "writers": [
+                "Lana Wachowski",
+                "Lilly Wachowski"
+            ],
+            "actors": [
+                "Keanu Reeves",
+                "Laurence Fishburne",
+                "Carrie-Anne Moss"
+            ],
             "year": "1999",
             "rating": "8.7",
             "genres": [
@@ -545,14 +878,35 @@
                 "Dystopian Sci-Fi",
                 "Gun Fu"
             ],
-            "duration": "2 hours 16 minutes",
+            "duration": "2h 16m",
             "director": "Lana Wachowski & Lilly Wachowskil",
-            "plot": "When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.",
-            "poster_url": "https://m.media-amazon.com/images/M/MV5BN2NmN2VhMTQtMDNiOS00NDlhLTliMjgtODE2ZTY0ODQyNDRhXkEyXkFqcGc@._V1_QL75_UX190_CR0,2,190,281_.jpg",
-            "imdb_url": "https://www.imdb.com/title/tt0133093/"
+            "likeCount": 253,
+            "reactions": {
+                "count": 83,
+                "smile": 25,
+                "light": 7,
+                "love": 38,
+                "wow": 13
+            },
+            "production": "Expected November 7, 2025",
+            "videoCount": 1,
+            "photoCount": 1,
+            "description": "When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.",
+            "countWishlist": 54200,
+            "posterUrl": "https://m.media-amazon.com/images/M/MV5BN2NmN2VhMTQtMDNiOS00NDlhLTliMjgtODE2ZTY0ODQyNDRhXkEyXkFqcGc@._V1_QL75_UX190_CR0,2,190,281_.jpg",
+            "id": "0133093"
         },
         {
             "title": "Goodfellas",
+            "writers": [
+                "Nicholas Pileggi",
+                "Martin Scorsese"
+            ],
+            "actors": [
+                "Robert De Niro",
+                "Ray Liotta",
+                "Joe Pesci"
+            ],
             "year": "1990",
             "rating": "8.7",
             "genres": [
@@ -562,14 +916,35 @@
                 "Biography",
                 "Crime"
             ],
-            "duration": "2 hours 25 minutes",
+            "duration": "2h 25m",
             "director": "Martin Scorsese",
-            "plot": "The story of Henry Hill and his life in the mafia, covering his relationship with his wife Karen and his mob partners Jimmy Conway and Tommy DeVito.",
-            "poster_url": "https://m.media-amazon.com/images/M/MV5BN2E5NzI2ZGMtY2VjNi00YTRjLWI1MDUtZGY5OWU1MWJjZjRjXkEyXkFqcGc@._V1_QL75_UX190_CR0,2,190,281_.jpg",
-            "imdb_url": "https://www.imdb.com/title/tt0099685/"
+            "likeCount": 253,
+            "reactions": {
+                "count": 83,
+                "smile": 25,
+                "light": 7,
+                "love": 38,
+                "wow": 13
+            },
+            "production": "Expected November 7, 2025",
+            "videoCount": 1,
+            "photoCount": 1,
+            "description": "The story of Henry Hill and his life in the mafia, covering his relationship with his wife Karen and his mob partners Jimmy Conway and Tommy DeVito.",
+            "countWishlist": 54200,
+            "posterUrl": "https://m.media-amazon.com/images/M/MV5BN2E5NzI2ZGMtY2VjNi00YTRjLWI1MDUtZGY5OWU1MWJjZjRjXkEyXkFqcGc@._V1_QL75_UX190_CR0,2,190,281_.jpg",
+            "id": "0099685"
         },
         {
             "title": "Interstellar",
+            "writers": [
+                "Jonathan Nolan",
+                "Christopher Nolan"
+            ],
+            "actors": [
+                "Matthew McConaughey",
+                "Anne Hathaway",
+                "Jessica Chastain"
+            ],
             "year": "2014",
             "rating": "8.7",
             "genres": [
@@ -579,14 +954,36 @@
                 "Quest",
                 "Sci-Fi Epic"
             ],
-            "duration": "2 hours 49 minutes",
+            "duration": "2h 49m",
             "director": "Kip Thorne",
-            "plot": "When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.",
-            "poster_url": "https://m.media-amazon.com/images/M/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5ZDJlYWY3XkEyXkFqcGc@._V1_QL75_UX190_CR0,0,190,281_.jpg",
-            "imdb_url": "https://www.imdb.com/title/tt0816692/"
+            "likeCount": 253,
+            "reactions": {
+                "count": 83,
+                "smile": 25,
+                "light": 7,
+                "love": 38,
+                "wow": 13
+            },
+            "production": "Expected November 7, 2025",
+            "videoCount": 1,
+            "photoCount": 1,
+            "description": "When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.",
+            "countWishlist": 54200,
+            "posterUrl": "https://m.media-amazon.com/images/M/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5ZDJlYWY3XkEyXkFqcGc@._V1_QL75_UX190_CR0,0,190,281_.jpg",
+            "id": "0816692"
         },
         {
             "title": "One Flew Over the Cuckoo's Nest",
+            "writers": [
+                "Lawrence Hauben",
+                "Bo Goldman",
+                "Ken Kesey"
+            ],
+            "actors": [
+                "Jack Nicholson",
+                "Louise Fletcher",
+                "Will Sampson"
+            ],
             "year": "1975",
             "rating": "8.7",
             "genres": [
@@ -596,14 +993,34 @@
                 "Freedom",
                 "Iconic performance"
             ],
-            "duration": "2 hours 13 minutes",
+            "duration": "2h 13m",
             "director": "Milos Forman",
-            "plot": "A rebellious convict is sent to a psychiatric hospital for evaluation in 1963 Oregon, and encourages his docile companions to take more control of their lives and defy the tyrannical head nurse.",
-            "poster_url": "https://m.media-amazon.com/images/M/MV5BYjBkMjgzMzYtNzRiMS00NDc3LWE4YTUtZjYxYjZhNjNhYzhhXkEyXkFqcGc@._V1_QL75_UX190_CR0,0,190,281_.jpg",
-            "imdb_url": "https://www.imdb.com/title/tt0073486/"
+            "likeCount": 253,
+            "reactions": {
+                "count": 83,
+                "smile": 25,
+                "light": 7,
+                "love": 38,
+                "wow": 13
+            },
+            "production": "Expected November 7, 2025",
+            "videoCount": 1,
+            "photoCount": 1,
+            "description": "A rebellious convict is sent to a psychiatric hospital for evaluation in 1963 Oregon, and encourages his docile companions to take more control of their lives and defy the tyrannical head nurse.",
+            "countWishlist": 54200,
+            "posterUrl": "https://m.media-amazon.com/images/M/MV5BYjBkMjgzMzYtNzRiMS00NDc3LWE4YTUtZjYxYjZhNjNhYzhhXkEyXkFqcGc@._V1_QL75_UX190_CR0,0,190,281_.jpg",
+            "id": "0073486"
         },
         {
             "title": "Se7en",
+            "writers": [
+                "Andrew Kevin Walker"
+            ],
+            "actors": [
+                "Brad Pitt",
+                "Morgan Freeman",
+                "Gwyneth Paltrow"
+            ],
             "year": "1995",
             "rating": "8.6",
             "genres": [
@@ -613,14 +1030,37 @@
                 "Psychological Drama",
                 "Psychological Thriller"
             ],
-            "duration": "2 hours 7 minutes",
+            "duration": "2h 7m",
             "director": "David Fincher",
-            "plot": "Two detectives, a rookie and a veteran, hunt a serial killer who uses the seven deadly sins as his motives.",
-            "poster_url": "https://m.media-amazon.com/images/M/MV5BY2IzNzMxZjctZjUxZi00YzAxLTk3ZjMtODFjODdhMDU5NDM1XkEyXkFqcGc@._V1_QL75_UX190_CR0,8,190,281_.jpg",
-            "imdb_url": "https://www.imdb.com/title/tt0114369/"
+            "likeCount": 253,
+            "reactions": {
+                "count": 83,
+                "smile": 25,
+                "light": 7,
+                "love": 38,
+                "wow": 13
+            },
+            "production": "Expected November 7, 2025",
+            "videoCount": 1,
+            "photoCount": 1,
+            "description": "Two detectives, a rookie and a veteran, hunt a serial killer who uses the seven deadly sins as his motives.",
+            "countWishlist": 54200,
+            "posterUrl": "https://m.media-amazon.com/images/M/MV5BY2IzNzMxZjctZjUxZi00YzAxLTk3ZjMtODFjODdhMDU5NDM1XkEyXkFqcGc@._V1_QL75_UX190_CR0,8,190,281_.jpg",
+            "id": "0114369"
         },
         {
             "title": "It's a Wonderful Life",
+            "writers": [
+                "Frances Goodrich",
+                "Albert Hackett",
+                "Frank Capra",
+                "Philip Van Doren Stern"
+            ],
+            "actors": [
+                "James Stewart",
+                "Donna Reed",
+                "Lionel Barrymore"
+            ],
             "year": "1946",
             "rating": "8.6",
             "genres": [
@@ -630,14 +1070,35 @@
                 "Psychological Drama",
                 "Supernatural Fantasy"
             ],
-            "duration": "2 hours 10 minutes",
+            "duration": "2h 10m",
             "director": "Donna Reed",
-            "plot": "An angel is sent from Heaven to help a desperately frustrated businessman by showing him what life would have been like if he had never existed.",
-            "poster_url": "https://m.media-amazon.com/images/M/MV5BMDM4OWFhYjEtNTE5Yy00NjcyLTg5N2UtZDQwNDZlYjlmNDU5XkEyXkFqcGc@._V1_QL75_UY281_CR2,0,190,281_.jpg",
-            "imdb_url": "https://www.imdb.com/title/tt0038650/"
+            "likeCount": 253,
+            "reactions": {
+                "count": 83,
+                "smile": 25,
+                "light": 7,
+                "love": 38,
+                "wow": 13
+            },
+            "production": "Expected November 7, 2025",
+            "videoCount": 1,
+            "photoCount": 1,
+            "description": "An angel is sent from Heaven to help a desperately frustrated businessman by showing him what life would have been like if he had never existed.",
+            "countWishlist": 54200,
+            "posterUrl": "https://m.media-amazon.com/images/M/MV5BMDM4OWFhYjEtNTE5Yy00NjcyLTg5N2UtZDQwNDZlYjlmNDU5XkEyXkFqcGc@._V1_QL75_UY281_CR2,0,190,281_.jpg",
+            "id": "0038650"
         },
         {
             "title": "The Silence of the Lambs",
+            "writers": [
+                "Thomas Harris",
+                "Ted Tally"
+            ],
+            "actors": [
+                "Jodie Foster",
+                "Anthony Hopkins",
+                "Scott Glenn"
+            ],
             "year": "1991",
             "rating": "8.6",
             "genres": [
@@ -647,14 +1108,36 @@
                 "Psychological Thriller",
                 "Serial Killer"
             ],
-            "duration": "1 hours 58 minutes",
+            "duration": "1h 58m",
             "director": "Roger Corman",
-            "plot": "A young F.B.I. cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a madman who skins his victims.",
-            "poster_url": "https://m.media-amazon.com/images/M/MV5BNDdhOGJhYzctYzYwZC00YmI2LWI0MjctYjg4ODdlMDExYjBlXkEyXkFqcGc@._V1_QL75_UY281_CR0,0,190,281_.jpg",
-            "imdb_url": "https://www.imdb.com/title/tt0102926/"
+            "likeCount": 253,
+            "reactions": {
+                "count": 83,
+                "smile": 25,
+                "light": 7,
+                "love": 38,
+                "wow": 13
+            },
+            "production": "Expected November 7, 2025",
+            "videoCount": 1,
+            "photoCount": 1,
+            "description": "A young F.B.I. cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a madman who skins his victims.",
+            "countWishlist": 54200,
+            "posterUrl": "https://m.media-amazon.com/images/M/MV5BNDdhOGJhYzctYzYwZC00YmI2LWI0MjctYjg4ODdlMDExYjBlXkEyXkFqcGc@._V1_QL75_UY281_CR0,0,190,281_.jpg",
+            "id": "0102926"
         },
         {
             "title": "Seven Samurai",
+            "writers": [
+                "Akira Kurosawa",
+                "Shinobu Hashimoto",
+                "Hideo Oguni"
+            ],
+            "actors": [
+                "Toshirô Mifune",
+                "Takashi Shimura",
+                "Keiko Tsushima"
+            ],
             "year": "1954",
             "rating": "8.6",
             "genres": [
@@ -664,14 +1147,34 @@
                 "Samurai",
                 "Action"
             ],
-            "duration": "3 hours 27 minutes",
+            "duration": "3h 27m",
             "director": "Akira Kurosawa",
-            "plot": "Farmers from a village exploited by bandits hire a veteran samurai for protection, and he gathers six other samurai to join him.",
-            "poster_url": "https://m.media-amazon.com/images/M/MV5BZjliMWExOTMtZDQ3ZS00NWU3LWIyN2EtMjllNzk3ZTNlYzg4XkEyXkFqcGc@._V1_QL75_UY281_CR5,0,190,281_.jpg",
-            "imdb_url": "https://www.imdb.com/title/tt0047478/"
+            "likeCount": 253,
+            "reactions": {
+                "count": 83,
+                "smile": 25,
+                "light": 7,
+                "love": 38,
+                "wow": 13
+            },
+            "production": "Expected November 7, 2025",
+            "videoCount": 1,
+            "photoCount": 1,
+            "description": "Farmers from a village exploited by bandits hire a veteran samurai for protection, and he gathers six other samurai to join him.",
+            "countWishlist": 54200,
+            "posterUrl": "https://m.media-amazon.com/images/M/MV5BZjliMWExOTMtZDQ3ZS00NWU3LWIyN2EtMjllNzk3ZTNlYzg4XkEyXkFqcGc@._V1_QL75_UY281_CR5,0,190,281_.jpg",
+            "id": "0047478"
         },
         {
             "title": "Saving Private Ryan",
+            "writers": [
+                "Robert Rodat"
+            ],
+            "actors": [
+                "Tom Hanks",
+                "Matt Damon",
+                "Tom Sizemore"
+            ],
             "year": "1998",
             "rating": "8.6",
             "genres": [
@@ -681,14 +1184,35 @@
                 "Drama",
                 "War"
             ],
-            "duration": "2 hours 49 minutes",
+            "duration": "2h 49m",
             "director": "Steven Spielberg",
-            "plot": "Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose comrades have been killed in action.",
-            "poster_url": "https://m.media-amazon.com/images/M/MV5BZGZhZGQ1ZWUtZTZjYS00MDJhLWFkYjctN2ZlYjE5NWYwZDM2XkEyXkFqcGc@._V1_QL75_UY281_CR1,0,190,281_.jpg",
-            "imdb_url": "https://www.imdb.com/title/tt0120815/"
+            "likeCount": 253,
+            "reactions": {
+                "count": 83,
+                "smile": 25,
+                "light": 7,
+                "love": 38,
+                "wow": 13
+            },
+            "production": "Expected November 7, 2025",
+            "videoCount": 1,
+            "photoCount": 1,
+            "description": "Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose comrades have been killed in action.",
+            "countWishlist": 54200,
+            "posterUrl": "https://m.media-amazon.com/images/M/MV5BZGZhZGQ1ZWUtZTZjYS00MDJhLWFkYjctN2ZlYjE5NWYwZDM2XkEyXkFqcGc@._V1_QL75_UY281_CR1,0,190,281_.jpg",
+            "id": "0120815"
         },
         {
             "title": "The Green Mile",
+            "writers": [
+                "Stephen King",
+                "Frank Darabont"
+            ],
+            "actors": [
+                "Tom Hanks",
+                "Michael Clarke Duncan",
+                "David Morse"
+            ],
             "year": "1999",
             "rating": "8.6",
             "genres": [
@@ -698,11 +1222,23 @@
                 "Tragedy",
                 "Crime"
             ],
-            "duration": "3 hours 9 minutes",
+            "duration": "3h 9m",
             "director": "Frank Darabont",
-            "plot": "A death row guard learns that a gentle giant in his charge possesses a mysterious gift.",
-            "poster_url": "https://m.media-amazon.com/images/M/MV5BMTUxMzQyNjA5MF5BMl5BanBnXkFtZTYwOTU2NTY3._V1_QL75_UX190_CR0,0,190,281_.jpg",
-            "imdb_url": "https://www.imdb.com/title/tt0120689/"
+            "likeCount": 253,
+            "reactions": {
+                "count": 83,
+                "smile": 25,
+                "light": 7,
+                "love": 38,
+                "wow": 13
+            },
+            "production": "Expected November 7, 2025",
+            "videoCount": 1,
+            "photoCount": 1,
+            "description": "A death row guard learns that a gentle giant in his charge possesses a mysterious gift.",
+            "countWishlist": 54200,
+            "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTUxMzQyNjA5MF5BMl5BanBnXkFtZTYwOTU2NTY3._V1_QL75_UX190_CR0,0,190,281_.jpg",
+            "id": "0120689"
         }
     ]
 }

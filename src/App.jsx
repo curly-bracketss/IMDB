@@ -1,22 +1,21 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-
-import Navbar from "./header/Navbar.jsx"
-import Home from "../pages/Home.jsx"
-import Trailer from "./Components/Trailer.jsx"
-
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "../pages/Home.jsx";
+import AllTrailers from "./Components/AllTrailers.jsx";
+import MainLayout from "../layout/MainLayout.jsx";
+import MovieDetails from "../pages/MovieDetails.jsx";
+import MovieAbout from "../pages/MovieAbout.jsx";
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/video/:id" element={<Trailer />} />
-        </Routes>
-      </BrowserRouter>
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<Home />} />
+          <Route path="/video/:id" element={<MovieDetails />} />
+          <Route path="/title/:id" element={<MovieAbout />} />
+          <Route path="/trailers" element={<AllTrailers />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
-
-export default App
+export default App;

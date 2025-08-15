@@ -48,16 +48,16 @@ const Swiper = () => {
     if (totalSlides === 0) return null;
 
     return (
-        <div className="flex flex-col lg:flex-row  py-10 gap-2 mx-auto max-w-[1400px] ">
+        <div className="flex flex-col lg:flex-row  py-10 gap-2 px-[0.75rem]">
             <div
-                className="relative w-full max-w-4xl   rounded-2xl shadow-2xl "
+                className="relative w-full  rounded-2xl shadow-2xl "
                 onMouseEnter={() => setIsPaused(true)}
                 onMouseLeave={() => setIsPaused(false)}
             >
-                {/* Slides Container */}
+                
                 <div className="overflow-hidden w-full h-full">
                     <div
-                        className="flex w-full h-full transition-transform duration-700 ease-in-out"
+                        className="flex w-full items-center  h-full transition-transform duration-700 ease-in-out"
                         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
                     >
                         {slides.map((slide, index) => (

@@ -1,4 +1,4 @@
-import { HiLightBulb } from "react-icons/hi";
+import { FaHandsClapping } from "react-icons/fa6";
 import { FaHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -61,9 +61,10 @@ const UpNext = ({ slide }) => {
                         </span>
                         <span className="flex items-center gap-1" >
                             <span className="relative">
-                                <FaHeart className="text-pink-800  absolute bottom-0 " />
-                                <HiLightBulb className="text-[#F5C518] ml-2 text-[18px]" />
+                                <FaHeart className="text-pink-800  absolute  text-[1.25rem] " />
+                                <FaHandsClapping  className="text-[#F5C518] ml-3 mt-2 " />
                             </span>
+                            
                             {slide.reactions.count}
                         </span>
 
