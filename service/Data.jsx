@@ -10,6 +10,15 @@ export async function getMenuData() {
         throw err;
     }
 }
+export async function getMoreExploreData() {
+    try {
+        const res = await AxiosInstance.get('/moreExplore');
+        return res.data;
+    } catch (err) {
+        console.error('Error fetching menu:', err);
+        throw err;
+    }
+}
 export async function getSwiperData() {
     try {
         const res = await AxiosInstance.get('/swiper');
@@ -28,4 +37,12 @@ export async function getMovieData() {
         throw err;
     }
 }
-
+export async function updateMovie(movieId, trailerDuration) {
+  try {
+    const res = await AxiosInstance.patch(`/topFilms/${movieId}`, { trailerDuration });
+    return res.data;
+  } catch (err) {
+    console.error("Error updating movie duration:", err);
+    throw err;
+  }
+}

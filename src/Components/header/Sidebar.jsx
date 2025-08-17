@@ -38,7 +38,7 @@ const Sidebar = () => {
         <div>
             <button
                 onClick={() => setIsOpen(true)}
-                className="text-white hover:bg-[#313131] px-4 py-3 rounded-4xl tracking-[1.25rem] min-h-[3rem] min-w-[3rem]"
+                className="text-white hover:bg-[#313131] px-4 py-3 cursor-pointer rounded-4xl tracking-[1.25rem] min-h-[3rem] min-w-[3rem]"
             >
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
@@ -49,12 +49,12 @@ const Sidebar = () => {
 
             {isOpen && (
                 <div
-                    className="fixed top-0 left-0 w-screen h-screen  z-[1]"
+                    className="fixed top-0 left-0 w-screen h-screen  z-100"
                     onClick={() => setIsOpen(false)}
                 >
                     <div
                         ref={sideRef}
-                        className="bg-[#1f1f1f] h-screen overflow-y-auto relative w-[280px] z-[2] flex flex-col "
+                        className="bg-[#1f1f1f] h-screen overflow-y-auto relative w-[280px] flex flex-col "
                         onClick={(e) => e.stopPropagation()}
                     >
                         <div
@@ -83,7 +83,7 @@ const Sidebar = () => {
                                                 src={section.icon}
                                                 alt={`${section.name} icon`}
                                                 className={`w-6 h-6 transition duration-200 m-3 ${isExpanded
-                                                    ? "filter invert-[50%] sepia-[100%] saturate-[700%] hue-rotate-[10deg] brightness-[95%] contrast-[95%]" 
+                                                    ? "white-to-yellow" 
                                                     :  "invert opacity-50 group-hover:opacity-100 transition-colors"
                                                     }`}
 
@@ -114,6 +114,7 @@ const Sidebar = () => {
                                             <div className="border-b border-gray-700">
                                                 {section.items.map((item, index) => (
                                                     <Link
+                                                    onClick={()=>setIsOpen(false)}
                                                         key={index}
                                                         to={item.url}
                                                         className="block pl-12 pr-4 py-2 text-md  hover:text-white hover:bg-[#313131] transition-colors"

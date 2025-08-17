@@ -4,6 +4,7 @@ import AllTrailers from "./Components/AllTrailers.jsx";
 import MainLayout from "../layout/MainLayout.jsx";
 import MovieDetails from "../pages/MovieDetails.jsx";
 import MovieAbout from "../pages/MovieAbout.jsx";
+import AllLists from "../pages/AllLists.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -13,6 +14,7 @@ function App() {
           <Route path="/video/:id" element={<MovieDetails />} />
           <Route path="/title/:id" element={<MovieAbout />} />
           <Route path="/trailers" element={<AllTrailers />} />
+          <Route path="/chart/:species" element={<AllLists />} />
         </Route>
       </Routes>
     </BrowserRouter>

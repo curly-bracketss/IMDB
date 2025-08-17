@@ -351,7 +351,6 @@ export default function Trailer() {
 
 
   return (
-    <div className="bg-black">
       <div className="flex items-center justify-center w-full">
         <div className={`w-full h-3/5 flex lg:flex-row flex-col gap-5 -px-2 justify-between ${isFullscreen ? 'bg-black' : 'bg-[#121212]'}`}>
 
@@ -375,20 +374,22 @@ export default function Trailer() {
               </div>
             )}
             <div ref={containerRef} className={isFullscreen ? 'fixed inset-0 z-50 bg-black' : 'relative'}>
-              <video
-                ref={videoRef}
-                className="w-full h-full object-contain"
-                onClick={togglePlay}
-                
-                poster={posterUrl}
-              >
-                <source src={videoSrc} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-
+              {videoSrc ? (
+                <video
+                  ref={videoRef}
+                  className="w-full h-full object-contain"
+                  onClick={togglePlay}
+                  poster={posterUrl}
+                  
+                >
+                  <source src={videoSrc} type="video/mp4" />
+                </video>
+              ) : (
+                <p className="text-gray-400 h-[50vh] text-2xl w-full flex items-center justify-center">No trailers found</p>
+              )}
               {/* Center Play Controls */}
 
-              <div className={`absolute inset-0 flex items-center justify-center z-10  ${showControls ? 'opacity-100' : 'opacity-0'}`} onClick={togglePlay}>
+              {videoSrc && <div className={`absolute inset-0 flex items-center justify-center z-10  ${showControls ? 'opacity-100' : 'opacity-0'}`} onClick={togglePlay}>
                 <div className="flex items-center gap-10">
                   <button
                     onClick={(e) => {
@@ -429,86 +430,86 @@ export default function Trailer() {
                   </button>
                 </div>
               </div>
-
+              }
               {/* Bottom Controls */}
-
-              <div className={`absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black to-transparent p-2 transition-opacity duration-300 z-20 ${showControls ? 'opacity-100' : 'opacity-0'}`}>
-                {/* Progress Bar */}
-                <div
-                  className="w-full h-1 bg-[#ffffffb3] opacity-[0.8] rounded-full mb-4 cursor-pointer hover:opacity-100 transition-all"
-                  onClick={handleSeek}
-                >
+              
+                <div className={`absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black to-transparent p-2 transition-opacity duration-300 z-20 ${showControls ? 'opacity-100' : 'opacity-0'}`}>
+                  {/* Progress Bar */}
                   <div
-                    className="h-full bg-white rounded-full transition-all"
-                    style={{ width: `${duration > 0 ? (currentTime / duration) * 100 : 0}%` }}
-                  />
-                </div>
-                <div className=" flex items-center justify-between">
-                  <div className="flex items-center space-x-4 relative">
-                    <button
-                      onClick={togglePlay}
-                      className="w-6 h-6 transition-all duration-300 opacity-[0.8] hover:opacity-100 cursor-pointer"
-                    >
-                      {isPlaying ?
-                        <img src={pause} className="invert-80" alt="pause" /> :
-                        <img src={play} className="invert-80" alt="play" />
-                      }
-                    </button>
-
-                    <button
-                      onClick={skipBackward}
-                      className="w-7 h-7 duration-300 opacity-[0.8] hover:opacity-100 cursor-pointer transition-colors"
-                    >
-                      <img src={rewind} className="invert-80" alt="rewind" />
-                    </button>
-
-                    <div className="flex items-center flex-col group relative border-b-2 border-transparent hover:border-white">
+                    className="w-full h-1 bg-[#ffffffb3] opacity-[0.8] rounded-full mb-4 cursor-pointer hover:opacity-100 transition-all"
+                    onClick={handleSeek}
+                  >
+                    <div
+                      className="h-full bg-white rounded-full transition-all"
+                      style={{ width: `${duration > 0 ? (currentTime / duration) * 100 : 0}%` }}
+                    />
+                  </div>
+                  <div className=" flex items-center justify-between">
+                    <div className="flex items-center space-x-4 relative">
                       <button
-                        onClick={toggleMute}
-                        className="w-7 h-7 opacity-[0.8] cursor-pointer hover:opacity-100 transition-all duration-100"
+                        onClick={togglePlay}
+                        className="w-6 h-6 transition-all duration-300 opacity-[0.8] hover:opacity-100 cursor-pointer"
                       >
-                        {isMuted ? (
-                          <img src={volumeMin} className="invert-80" />
-                        ) : (
-                          <img src={volumeMax} className="invert-80" />
-                        )}
+                        {isPlaying ?
+                          <img src={pause} className="invert-80" alt="pause" /> :
+                          <img src={play} className="invert-80" alt="play" />
+                        }
                       </button>
 
-
-                      <div className="absolute left-0 -top-40 w-12 h-48 bg-transparent" />
-
-                      <div
-                        ref={sliderRef}
-                        onMouseDown={handleMouseDown}
-                        onClick={isMuted ? toggleMute : undefined}
-                        className="absolute hidden group-hover:block -top-35 w-1 h-25 bg-[#ffffffb3] cursor-pointer"
+                      <button
+                        onClick={skipBackward}
+                        className="w-7 h-7 duration-300 opacity-[0.8] hover:opacity-100 cursor-pointer transition-colors"
                       >
+                        <img src={rewind} className="invert-80" alt="rewind" />
+                      </button>
+
+                      <div className="flex items-center flex-col group relative border-b-2 border-transparent hover:border-white">
+                        <button
+                          onClick={toggleMute}
+                          className="w-7 h-7 opacity-[0.8] cursor-pointer hover:opacity-100 transition-all duration-100"
+                        >
+                          {isMuted ? (
+                            <img src={volumeMin} className="invert-80" />
+                          ) : (
+                            <img src={volumeMax} className="invert-80" />
+                          )}
+                        </button>
+
+
+                        <div className="absolute left-0 -top-40 w-12 h-48 bg-transparent" />
+
                         <div
-                          className="absolute bottom-0 left-0 w-full bg-white"
-                          style={{ height: `${isMuted ? 0 : volume * 100}%` }}
-                        />
-                        <div
-                          className="absolute -left-1.5 w-4 h-4 rounded-full bg-white translate-x-1/2"
-                          style={{
-                            bottom: `${isMuted ? 0 : volume * 100}%`,
-                            transform: "translate(-50%, 50%)",
-                          }}
-                        />
+                          ref={sliderRef}
+                          onMouseDown={handleMouseDown}
+                          onClick={isMuted ? toggleMute : undefined}
+                          className="absolute hidden group-hover:block -top-35 w-1 h-25 bg-[#ffffffb3] cursor-pointer"
+                        >
+                          <div
+                            className="absolute bottom-0 left-0 w-full bg-white"
+                            style={{ height: `${isMuted ? 0 : volume * 100}%` }}
+                          />
+                          <div
+                            className="absolute -left-1.5 w-4 h-4 rounded-full bg-white translate-x-1/2"
+                            style={{
+                              bottom: `${isMuted ? 0 : volume * 100}%`,
+                              transform: "translate(-50%, 50%)",
+                            }}
+                          />
+                        </div>
                       </div>
+
+
+                      <span className="text-white text-sm tracking-wide">
+                        {formatTime(currentTime)} / {formatTime(duration)}
+                      </span>
                     </div>
 
-
-                    <span className="text-white text-sm tracking-wide">
-                      {formatTime(currentTime)} / {formatTime(duration)}
-                    </span>
+                    <button onClick={toggleFullscreen} className="w-4 h-4 text-white transition-all duration-300 opacity-[0.8] hover:opacity-100 cursor-pointer">
+                      {!isFullscreen ? <img src={maximize} className="invert-80" /> : <img src={minimize} className="invert-80" />}
+                    </button>
                   </div>
-
-                  <button onClick={toggleFullscreen} className="w-4 h-4 text-white transition-all duration-300 opacity-[0.8] hover:opacity-100 cursor-pointer">
-                    {!isFullscreen ? <img src={maximize} className="invert-80" /> : <img src={minimize} className="invert-80" />}
-                  </button>
                 </div>
-              </div>
-
+              
             </div>
 
             {/* Reaction Controls*/}
@@ -680,7 +681,6 @@ export default function Trailer() {
           )}
         </div>
       </div >
-    </div >
 
   );
 }
