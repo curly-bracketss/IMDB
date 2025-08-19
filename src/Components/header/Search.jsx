@@ -36,10 +36,6 @@ const Search = () => {
         if (inputRef.current) {
             inputRef.current.focus();
         }
-        if( inputRef.current.value.trim()===''){
-            setOpen(false)
-            setSearchResults([])
-        }
     }, []);
 
     function handleInp(e) {
