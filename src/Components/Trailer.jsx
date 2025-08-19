@@ -433,7 +433,7 @@ export default function Trailer() {
               }
               {/* Bottom Controls */}
               
-                <div className={`absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black to-transparent p-2 transition-opacity duration-300 z-20 ${showControls ? 'opacity-100' : 'opacity-0'}`}>
+                <div className={`absolute bottom-0 left-0 right-0  p-2 transition-opacity duration-300 z-20 ${showControls ? 'opacity-100' : 'opacity-0'}`}>
                   {/* Progress Bar */}
                   <div
                     className="w-full h-1 bg-[#ffffffb3] opacity-[0.8] rounded-full mb-4 cursor-pointer hover:opacity-100 transition-all"
@@ -444,7 +444,7 @@ export default function Trailer() {
                       style={{ width: `${duration > 0 ? (currentTime / duration) * 100 : 0}%` }}
                     />
                   </div>
-                  <div className=" flex items-center justify-between">
+                  <div className=" flex items-center justify-between px-2">
                     <div className="flex items-center space-x-4 relative">
                       <button
                         onClick={togglePlay}
@@ -504,7 +504,7 @@ export default function Trailer() {
                       </span>
                     </div>
 
-                    <button onClick={toggleFullscreen} className="w-4 h-4 text-white transition-all duration-300 opacity-[0.8] hover:opacity-100 cursor-pointer">
+                    <button onClick={toggleFullscreen} className="w-4 h-4 text-white transition-all duration-300  opacity-[0.8] hover:opacity-100 cursor-pointer">
                       {!isFullscreen ? <img src={maximize} className="invert-80" /> : <img src={minimize} className="invert-80" />}
                     </button>
                   </div>
@@ -526,7 +526,7 @@ export default function Trailer() {
                 <span className="md:hidden flex  gap-1" >
                   <span className="relative">
                     <FaHeart className="text-pink-800  absolute text-[1.45rem] " />
-                    <FaFaceGrinStars className="text-yellow-400 ml-4 mt-2" />
+                    <FaFaceGrinStars className="text-[#F5C518] ml-4 mt-2" />
                   </span>
                   <p className="text-[#ffffffb3] font-bold"> {movie?.reactions?.count}</p>
                 </span>
@@ -536,7 +536,7 @@ export default function Trailer() {
                 </button>
               </div>
               {/* Reactions and react bar*/}
-              {open && <div ref={wrapperRef} className="flex absolute top-10 left-35 z-50 bg-[#1F1F1F] p-3 rounded-md">
+              {open && <div ref={wrapperRef} className="flex absolute top-12 left-32  z-50 bg-[#1F1F1F] p-3 rounded-md">
                 {reactionButtons.map((reaction) => (
                   <button
                     key={reaction.type}

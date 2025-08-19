@@ -13,7 +13,7 @@ const MoreExplore = () => {
 
 
     return (
-        <div className='flex flex-col gap-5  w-full lg:w-[calc(33.3%-3rem)]'>
+        <div className='flex flex-col gap-5  w-full  lg:bg-transparent py-5 lg:py-5 lg:w-[calc(33.3%-3rem)]'>
             <div className="relative">
                 <PiLineVerticalBold className='text-[#F5C518] text-3xl font-extrabold absolute -left-5 bottom-0' />
                 <h2 className="pl-1 font-semibold text-3xl">More to explore</h2>

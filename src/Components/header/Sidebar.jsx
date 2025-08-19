@@ -24,7 +24,7 @@ const Sidebar = () => {
         }));
     };
     const [isSidebarOpen, setSidebarOpen] = useState(false);
-    const [selectedLanguage, setSelectedLanguage] = useState("en-US");
+    const [selectedLanguage, setSelectedLanguage] = useState("EN");
     const [selectedLabel, setSelectedLabel] = useState("English (United States)");
 
     const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);
@@ -38,7 +38,7 @@ const Sidebar = () => {
         <div>
             <button
                 onClick={() => setIsOpen(true)}
-                className="text-white hover:bg-[#313131] px-4 py-3 cursor-pointer rounded-4xl tracking-[1.25rem] min-h-[3rem] min-w-[3rem]"
+                className="text-white lg:hidden hover:bg-[#313131] px-4 py-3 cursor-pointer rounded-4xl tracking-[1.25rem] min-h-[3rem] min-w-[3rem]"
             >
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
@@ -140,10 +140,11 @@ const Sidebar = () => {
                                     <span  className="opacity-50 group-hover:opacity-100 transition-colors tracking-wider text-xs font-bold ">LANGUAGE</span>
                                     <span className="text-sm">{selectedLabel}</span>
                                 </span>
-                                <RiArrowDownSFill c className='opacity-50 group-hover:opacity-100 transition-colors' />
+                                <RiArrowDownSFill  className='opacity-50 group-hover:opacity-100 transition-colors' />
                             </button>
                             <LanguageSelector
                                 isOpen={isSidebarOpen}
+                                
                                 onClose={() => setSidebarOpen(false)}
                                 selectedLang={selectedLanguage}
                                 onSelect={handleLanguageSelect}

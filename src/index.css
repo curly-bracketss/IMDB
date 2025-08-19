@@ -19,7 +19,11 @@
 
 
 }
-
+.bg{
+   background: #1F1F1F;
+   background: linear-gradient(90deg, rgba(31, 31, 31, 0.89) 10%, rgba(31, 31, 31, 0.493) 100%, rgba(31, 31, 31, 0.87) 95%);
+  backdrop-filter: blur(30px);
+}
 @layer utilities {
   .white-to-yellow {
     @apply filter;
@@ -43,4 +47,14 @@
 
 .pop-up {
   animation: popUp 0.3s ease-out forwards;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #F5C518 !important;
+}
+
+/* Change pagination fraction color */
+.swiper-pagination {
+  color: #F5C518 !important;
+  font-weight: bold;
 }

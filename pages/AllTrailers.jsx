@@ -1,6 +1,6 @@
-import { dataCntxt } from "../../context/DataContext";
+import { dataCntxt } from "../context/DataContext";
 import { useContext, useState, useRef, useEffect } from "react";
-import Poster from "./Poster";
+import Poster from "../src/Components/Poster";
 import { GrFormNext } from "react-icons/gr";
 
 const AllTrailers = () => {

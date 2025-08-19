@@ -78,8 +78,8 @@ const Slider = ({ slide }) => {
                                     </span>
                                     <span className="flex items-center gap-1" >
                                         <span className="relative">
-                                            <FaHeart className="text-pink-800  absolute text-[1.25rem] " />
-                                            <FaFaceGrinStars className="text-yellow-400 ml-3 mt-2 text-[0.85rem]" />
+                                            <FaHeart className="text-[#f5185ad3]  absolute text-[1.2rem] " />
+                                            <FaFaceGrinStars className=" text-[#f5c518] ml-3 mt-1 text-[0.85rem]" />
                                         </span>
                                         {slide.reactions.count}
                                     </span>
