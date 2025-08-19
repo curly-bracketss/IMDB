@@ -40,7 +40,7 @@ const Filter = ({ onFilterChange }) => {
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" className='fill-white sm:fill-black' viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M8.71 11.71l2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71H9.41c-.89 0-1.33 1.08-.7 1.71z"></path></svg>
                 </button>
                 {isOpen &&
-                    <div className={`bg-[#1f1f1f] ${isOpen ? 'open' : 'transition '} mt-2  flex flex-col py-4 w-60 absolute text-white z-100 max-[600px]:-bottom-[95vh] max-[600px]:w-full  `}>
+                    <div className={`bg-[#1f1f1f] ${isOpen ? 'open' : 'transition '} mt-2  flex flex-col py-4 w-60 absolute text-white z-200 max-[600px]:-bottom-[95vh] max-[600px]:w-full  `}>
                         <button onClick={() => handleFilter('All')} className='flex hover:bg-white/10 cursor-pointer items-center gap-4 px-[1rem] py-[.75rem] group'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" className={` ${filter === "All" ? "fill-[#F5C518]" : "fill-[#ffffff80] group-hover:fill-white"}`} viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
                             <p className={` ${filter === "All" ? 'text-[#F5C518]' : 'text-white'}`}>All</p>
@@ -78,7 +78,7 @@ const Filter = ({ onFilterChange }) => {
                         </Link>
                     </div>}
             </div>
-            {isOpen && <div onClick={() => setIsOpen(false)} className='inset-0 bg-black/40 fixed z-40'>
+            {isOpen && <div onClick={() => setIsOpen(false)} className='inset-0 bg-black/40 fixed z-100'>
                 <span
                     onClick={() => setIsOpen(false)}
                     className="cursor-pointer p-2  sm:hidden hover:bg-[#313131] w-fit rounded-4xl absolute bottom-[38vh] right-0   text-white"

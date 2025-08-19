@@ -220,7 +220,7 @@ const AboutTrailer = () => {
                   <polygon points="24 0 0 0 0 32 12.24 26.29 24 31.77" />
                 </svg>
                 <svg
-                  className="fill-white absolute left-1 z-60 top-1"
+                  className="fill-white absolute left-1  top-1"
                   width="24"
                   height="28"
                   viewBox="0 0 20 20"

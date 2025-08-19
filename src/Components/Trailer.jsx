@@ -373,7 +373,7 @@ export default function Trailer() {
                 </button>
               </div>
             )}
-            <div ref={containerRef} className={isFullscreen ? 'fixed inset-0 z-50 bg-black' : 'relative'}>
+            <div ref={containerRef} className={isFullscreen ? 'fixed inset-0  bg-black' : 'relative'}>
               {videoSrc ? (
                 <video
                   ref={videoRef}
@@ -389,7 +389,7 @@ export default function Trailer() {
               )}
               {/* Center Play Controls */}
 
-              {videoSrc && <div className={`absolute inset-0 flex items-center justify-center z-10  ${showControls ? 'opacity-100' : 'opacity-0'}`} onClick={togglePlay}>
+              {videoSrc && <div className={`absolute inset-0 flex items-center justify-center  ${showControls ? 'opacity-100' : 'opacity-0'}`} onClick={togglePlay}>
                 <div className="flex items-center gap-10">
                   <button
                     onClick={(e) => {
@@ -433,7 +433,7 @@ export default function Trailer() {
               }
               {/* Bottom Controls */}
               
-                <div className={`absolute bottom-0 left-0 right-0  p-2 transition-opacity duration-300 z-20 ${showControls ? 'opacity-100' : 'opacity-0'}`}>
+                <div className={`absolute bottom-0 left-0 right-0  p-2 transition-opacity duration-300  ${showControls ? 'opacity-100' : 'opacity-0'}`}>
                   {/* Progress Bar */}
                   <div
                     className="w-full h-1 bg-[#ffffffb3] opacity-[0.8] rounded-full mb-4 cursor-pointer hover:opacity-100 transition-all"
@@ -536,7 +536,7 @@ export default function Trailer() {
                 </button>
               </div>
               {/* Reactions and react bar*/}
-              {open && <div ref={wrapperRef} className="flex absolute top-12 left-32  z-50 bg-[#1F1F1F] p-3 rounded-md">
+              {open && <div ref={wrapperRef} className="flex absolute top-12 left-32  z-2 bg-[#1F1F1F] p-3 rounded-md">
                 {reactionButtons.map((reaction) => (
                   <button
                     key={reaction.type}
@@ -627,7 +627,7 @@ export default function Trailer() {
                                 <polygon points="24 0 0 0 0 32 12.24 26.29 24 31.77" />
                               </svg>
                               <svg
-                                className="fill-white absolute left-1 z-60 top-1"
+                                className="fill-white absolute left-1  top-1"
                                 width="20"
                                 height="24"
                                 viewBox="0 0 20 20"

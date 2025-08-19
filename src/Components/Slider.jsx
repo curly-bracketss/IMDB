@@ -20,7 +20,7 @@ const Slider = ({ slide }) => {
                     alt={slide.title}
                     className=" w-full h-full pb-24 "
                 />
-                <div className="w-full  left-0 h-16 transition-colors sm:h-24 bottom-20 absolute bg-gradient-to-t  from-black via-black/90 to-transparent z-10" />
+                <div className="w-full  left-0 h-16 transition-colors sm:h-24 bottom-20 absolute bg-gradient-to-t  from-black via-black/90 to-transparent   10" />
                 <div className="absolute bottom-4 left-4 right-4 z-20 text-white flex items-end justify-between group">
                     <div className="flex items-end gap-4">
                         <div className="relative  rounded-md overflow-hidden   border-white/10 ">
@@ -34,7 +34,7 @@ const Slider = ({ slide }) => {
                             <Link to='/registration/sign-in'>
                                 <div className="absolute top-0 left-0">
                                     <svg
-                                        className="fill-[#12121275] stroke-white stroke-[0.08] absolute top-0 z-50"
+                                        className="fill-[#12121275] stroke-white stroke-[0.08] absolute top-0 z-20"
                                         width="44"
                                         height="64"
                                         viewBox="0 0 24 34"
@@ -42,7 +42,7 @@ const Slider = ({ slide }) => {
                                         <polygon points="24 0 0 0 0 32 12.24 26.29 24 31.77" />
                                     </svg>
                                     <svg
-                                        className="fill-white absolute top-2 left-0 z-60 translate-x-1.5"
+                                        className="fill-white absolute top-2 left-0 z-21  translate-x-1.5"
                                         width="28"
                                         height="32"
                                         viewBox="0 0 20 20"
