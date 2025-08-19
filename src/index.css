@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@plugin "daisyui";
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
@@ -26,7 +25,6 @@
 }
 @layer utilities {
   .white-to-yellow {
-    @apply filter;
     filter: invert(80%) sepia(900%) saturate(1500%) hue-rotate(-23deg);
   }
 }
