@@ -1,13 +1,15 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { useParams } from 'react-router-dom'
+
 import { useContext, useState, useEffect, useRef } from 'react'
 import { dataCntxt } from '../../context/DataContext';
 import { GrFormNext } from "react-icons/gr";
 import { TiStarOutline, TiStarFullOutline } from "react-icons/ti";
 import { LuDot } from "react-icons/lu";
 import { IoMdPhotos } from "react-icons/io";
+import { useNavigate, Link, useParams } from "react-router-dom"
+import { updateWatchList } from "../../service/AuthService"
 import { BiSolidVideos } from "react-icons/bi"
+import RoundedLoader from './CircularBubblesLoader'
 import imdbpro from '../assets/icons/imdbpro.svg'
 import darknight from '../assets/videos/darknight.mp4'
 import godfather from '../assets/videos/godfather.mp4'
@@ -21,6 +23,10 @@ import theshawshankredemption from '../assets/videos/theshawshankredemption.mp4'
 import headsofstatestarstakeourbigbadbuddiesquiz from '../assets/videos/headsofstatestarstakeourbigbadbuddiesquiz.mp4';
 import { FaFaceGrinStars } from "react-icons/fa6";
 import { FaHeart } from "react-icons/fa";
+import Post from './Post';
+import Rate from './Rate';
+import Watched from './Watched';
+import RatePopUp from './RatePopUp';
 
 const AboutTrailer = () => {
 
@@ -38,8 +44,7 @@ const AboutTrailer = () => {
     "0108052": schindlerslist,
     "0110912": pulpfiction
   };
-  const { swiperData } = useContext(dataCntxt);
-  const { movieData } = useContext(dataCntxt);
+  const { swiperData, movieData } = useContext(dataCntxt);
   const { id } = useParams();
   const movie = swiperData?.find((item) => item.id === id) || movieData?.find((item) => item.id === id);
   const posterUrl = movie?.trailerPosterUrl || movie?.posterUrl;
@@ -47,8 +52,8 @@ const AboutTrailer = () => {
   const boxRef = useRef(null);
   const [showPrev, setShowPrev] = useState(false);
   const [showNext, setShowNext] = useState(false);
+  const [openRate, setOpen] = useState(false)
   const videoRef = useRef(null);
-
   const checkScroll = () => {
     const el = boxRef.current;
     if (!el) return;
@@ -89,41 +94,64 @@ const AboutTrailer = () => {
   }
 
   const [watchList, setFav] = useState([]);
-  // const [show, setShow] = useState(false);
+
 
   useEffect(() => {
     const fav = JSON.parse(localStorage.getItem('watchList')) || [];
     setFav(fav);
   }, []);
-  // useEffect(() => {
-  // 	if (show) {
-  // 		const timer = setTimeout(() => setShow(false), 4000);
-  // 		return () => clearTimeout(timer);
-  // 	}
-  // }, [show]);
 
-  function handleFav(id) {
+
+  const [watchlist, setWatchList] = useState(false)
+  const [userExist, setUserExist] = useState(false)
+  const { currentUser, setCurrentUser } = useContext(dataCntxt)
+  const [loading, setLoading] = useState(false)
+  const rated = currentUser?.rateHistory?.find((item) => item.movieId === movie?.id);
+  const navigate = useNavigate()
+  useEffect(() => {
     if (!movie) return;
+    if (localStorage.getItem('user') && currentUser) {
+      setUserExist(true);
+      setWatchList(currentUser.watchList.some(m => m.id === movie.id));
+    } else {
+      setUserExist(false);
+    }
+  }, [movie, currentUser]);
 
-    const currentwatchList = JSON.parse(localStorage.getItem('watchList')) || [];
-    const isFav = currentwatchList.some(item => item.id === id);
+  async function handleWatchList(userId, movie) {
+    if (!userExist) {
+      navigate('/registration/signin');
+      return;
+    }
+
+    setLoading(true);
 
     let newWatchList;
-    if (isFav) {
-      newWatchList = currentwatchList.filter(item => item.id !== id);
+    if (watchlist) {
+      newWatchList = currentUser.watchList.filter(m => m.id !== movie.id);
     } else {
-      newWatchList = [...currentwatchList, movie];
-      // setShow(true);
+      newWatchList = [...currentUser.watchList, movie];
     }
-    localStorage.setItem('watchList', JSON.stringify(newWatchList));
-    setFav(newWatchList);
+
+    try {
+      // Update in backend
+      const updatedUser = await updateWatchList(userId, newWatchList);
+      console.log("Watchlist updated:", updatedUser.watchList);
+
+      // Update context
+      setWatchList(prev => !prev);
+      setCurrentUser(prev => ({
+        ...prev,
+        watchList: updatedUser.watchList
+      }));
+
+    } catch (err) {
+      console.error("Failed to update watchlist:", err);
+    } finally {
+      setLoading(false);
+    }
   }
 
-  // const getCurrentwatchList = () => {
-  // 	return JSON.parse(localStorage.getItem('watchList')) || [];
-  // };
-
-  // const isFav = getCurrentwatchList().some(item => item.id === id);
   return (
     <div className='py-5 bg-center bg-cover flex flex-col gap-5'>
       <div className='flex text-white justify-end items-center gap-1 text-[0.925rem]'>
@@ -182,13 +210,19 @@ const AboutTrailer = () => {
               <p className='invert-60'> /10</p>
             </span>
           </div>}
-          <div className='flex flex-col gap-1 items-center'>
+          <div className='flex flex-col gap-1 items-center '>
             <p className='invert-60 tracking-wider font-bold text-sm '>YOUR RATING</p>
-            <span className='flex items-end gap-1  hover:bg-white/20 rounded-4xl px-1'>
-              <TiStarOutline className='text-[#5799EF] font-bold text-3xl' />
-              <p className='text-[#5799EF] font-medium text-xl'>Rate</p>
+            <div className=' flex items-center hover:bg-white/10 cursor-pointer rounded-full'>{rated ? <span><span onClick={() => setOpen(true)} className='flex items-center  hover:bg-white/20 rounded-4xl px-1'>
+              <svg className='fill-[#5799ef] mx-2' width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M12 20.1l5.82 3.682c1.066.675 2.37-.322 2.09-1.584l-1.543-6.926 5.146-4.667c.94-.85.435-2.465-.799-2.567l-6.773-.602L13.29.89a1.38 1.38 0 0 0-2.581 0l-2.65 6.53-6.774.602C.052 8.126-.453 9.74.486 10.59l5.147 4.666-1.542 6.926c-.28 1.262 1.023 2.26 2.09 1.585L12 20.099z"></path></svg>
+              <p className='text-white text-xl font-bold'>{rated?.rating}</p>
+              <p className='invert-60'> /10</p>
             </span>
-
+              {openRate && <RatePopUp
+                movie={movie}
+                onClose={() => setOpen(false)}
+              />}
+            </span> : <div className='font-bold text-2xl  hover:bg-white/10  text-[#5799ef] fill-[#5799ef] cursor-pointer rounded-full'><Rate movie={movie} /></div>}</div>
+ 
           </div>
           <div className='flex flex-col gap-1 items-center'>
             <p className='invert-60 tracking-wider font-bold text-sm uppercase'>Popularity</p>
@@ -203,38 +237,13 @@ const AboutTrailer = () => {
       {videoSrc && <div className='flex relative justify-between gap-1 lg:flex-row flex-wrap lg:h-[calc(45vh-3rem)] xl:h-[calc(50vh-3rem)]'>
         {
           movie &&
-          <div className="absolute -bottom-55 sm:bottom-0 w-[120px] sm:relative sm:w-[calc(27.65%-0.125rem)] lg:w-[calc(22.75%-0.125rem)] sm:h-full flex-shrink-0 overflow-hidden border-white/10">
-            <Link to={`/title/${movie.id}`} >
-              <img
-                src={movie.posterUrl}
-                alt={movie.title}
-                className="rounded-xl w-full h-full object-cover rounded-tl-none rounded-tr-[10px]"
-              />
-            </Link>
-            <Link to='/registration/sign-in'>
-              <div className="absolute top-0 left-0">
-                <svg
-                  className="fill-[#1f1f1fb6] stroke-[#444343] stroke-[0.8] absolute top-0 left-0"
-                  width="48px" height="68px" viewBox="0 0 32 45.3"
-                >
-                  <polygon points="24 0 0 0 0 32 12.24 26.29 24 31.77" />
-                </svg>
-                <svg
-                  className="fill-white absolute left-1  top-1"
-                  width="24"
-                  height="28"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z" />
-                </svg>
-              </div>
-            </Link>
+          <div className="absolute -bottom-55 sm:bottom-0 w-[120px] sm:relative sm:w-[calc(27.65%-0.125rem)] lg:w-[calc(26%-0.125rem)] xl:w-[calc(23.75%-0.125rem)] sm:h-full flex-shrink-0 overflow-hidden border-white/10">
+            <Post movie={movie} />
           </div>
         }
 
         {/* Video container - takes most of the remaining space */}
-        <Link to={`/video/${movie?.id}`} className='h-full relative sm:w-[calc(72.35%-0.125rem)] lg:w-[calc(60%-0.25rem)]'>
+        <Link to={`/video/${movie?.id}`} className='h-full relative sm:w-[calc(72.35%-0.125rem)] lg:w-[calc(59%-0.25rem)]'>
           <video
             src={videoSrc}
             poster={posterUrl}
@@ -276,7 +285,7 @@ const AboutTrailer = () => {
         </Link>
 
         {/* Stats container - narrow sidebar like IMDb */}
-        <div className='flex flex-row h-4 pt-4 lg:pt-0 w-full lg:h-full lg:flex-col lg:w-[calc(17.25%-0.25rem)] justify-between items-center gap-1'>
+        <div className='flex flex-row h-4 pt-4 lg:pt-0 w-full lg:h-full lg:flex-col lg:w-[calc(15%-0.125rem)] xl:w-[calc(17.25%-0.25rem)] justify-between items-center gap-1'>
           <Link to={`/title/${movie?.id}/videogallery`} className="bg-[#4d46435b] cursor-pointer hover:bg-white/10 lg:h-[calc(50%-0.125rem)] w-[calc(50%-0.125rem)] py-2 rounded-4xl text-white flex lg:flex-col gap-2 items-center justify-center lg:rounded-xl lg:w-full flex-1 px-2">
             <BiSolidVideos className='text-md lg:text-2xl xl:text-4xl' />
             <p className="text-white tracking-wider  font-medium text-sm lg:pt-1">{movie?.videoCount} videos</p>
@@ -290,38 +299,13 @@ const AboutTrailer = () => {
       <div className='flex  gap-5 flex-col lg:flex-row items-center'>
         {
           !videoSrc && movie &&
-          <div className="lg:relative absolute left-5 lg:left-0 w-[120px] lg:w-[calc(22.65%-0.125rem)]  flex-shrink-0 overflow-hidden border-white/10">
-            <Link to={`/title/${movie.id}`} >
-              <img
-                src={movie.posterUrl}
-                alt={movie.title}
-                className="rounded-xl w-full h-full object-cover rounded-tl-none rounded-tr-[10px]"
-              />
-            </Link>
-            <Link to='/registration/sign-in'>
-              <div className="absolute top-0 left-0">
-                <svg
-                  className="fill-[#1f1f1fb6] stroke-[#444343] stroke-[0.8] absolute top-0 left-0"
-                  width="48px" height="68px" viewBox="0 0 32 45.3"
-                >
-                  <polygon points="24 0 0 0 0 32 12.24 26.29 24 31.77" />
-                </svg>
-                <svg
-                  className="fill-white absolute left-1 z-60 top-1"
-                  width="24"
-                  height="28"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z" />
-                </svg>
-              </div>
-            </Link>
+          <div className="lg:relative absolute left-5 lg:left-0 w-[120px] lg:w-[240px] flex-shrink-0 overflow-hidden border-white/10">
+            <Post movie={movie} />
           </div>
         }
         <div className='flex justify-between lg:flex-row flex-col  w-full lg:items-center'>
           <div className='w-full lg:max-w-2/3 flex flex-col gap-5 pt-5 lg:pt-0'>
-            <div className='flex w-full flex-col  gap-5 relative    pl-[136px] min-h-[185.6px] lg:pl-0 lg:min-h-0'>
+            <div className={`flex w-full flex-col  gap-5 relative    pl-[136px] min-h-[185.6px] ${videoSrc && 'sm:pl-0 sm:min-h-0'} ${!videoSrc && movie && 'lg:pl-0 lg:min-h-0'}`}>
               <div className='flex w-full relative  items-center '>
                 {showPrev && <button onClick={() => scrollByAmount(-100)} className='font-bold text-3xl  rotate-180 border-l-1 border-[#fff3] hover:text-[#f5c518] py-2 cursor-pointer text-white'><GrFormNext /></button>}
                 <div ref={boxRef} className='flex  gap-2 overflow-scroll scrollbar-hide w-full transition-colors ease-in-out duration-200'>
@@ -336,19 +320,26 @@ const AboutTrailer = () => {
               </div>
               <h3 className='text-white tracking-tighter sm:tracking-wide line-clamp-5'>{movie?.preDescription || movie?.description}</h3>
             </div>
-            <div className='flex lg:hidden  gap-5 '>
-              {movie?.rating && <div className='flex  flex-col gap-1 items-center '>
+            <div className='flex lg:hidden  gap-5 items-center'>
+              {movie?.rating && <div className='flex  hover:bg-white/10 rounded-full cursor-pointer p-1  flex-col gap-1 items-center '>
                 <span className='flex items-center'>
                   <TiStarFullOutline className='text-[#F5C518] text-2xl pr-1' />
-                  <p className='text-white text-l font-bold'>{movie?.rating}</p>
+                  <p className='text-white  font-bold'>{movie?.rating}</p>
                   <p className='invert-60'> /10</p>
                 </span>
               </div>}
               <div className='flex flex-col gap-1 items-center'>
-                <span className='flex items-center gap-1'>
-                  <TiStarOutline className='text-[#5799EF] font-bold text-xl' />
-                  <p className='text-[#5799EF] font-medium text-l'>Rate</p>
+                <div className=' flex items-center hover:bg-white/10 cursor-pointer rounded-full'>{rated ? <span> <span onClick={() => setOpen(true)} className='flex items-center  hover:bg-white/20 rounded-4xl p-1'>
+                  <svg className='fill-[#5799ef] mx-2' width="18" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M12 20.1l5.82 3.682c1.066.675 2.37-.322 2.09-1.584l-1.543-6.926 5.146-4.667c.94-.85.435-2.465-.799-2.567l-6.773-.602L13.29.89a1.38 1.38 0 0 0-2.581 0l-2.65 6.53-6.774.602C.052 8.126-.453 9.74.486 10.59l5.147 4.666-1.542 6.926c-.28 1.262 1.023 2.26 2.09 1.585L12 20.099z"></path></svg>
+
+                  <p className='text-white  font-bold'>{rated?.rating}</p>
+                  <p className='invert-60'> /10</p>
                 </span>
+                  {openRate && <RatePopUp
+                    movie={movie}
+                    onClose={() => setOpen(false)}
+                  />}
+                </span> : <div className='font-bold text-xl text-[#5799ef] fill-[#5799ef] hover:bg-white/10  cursor-pointer rounded-full'><Rate movie={movie} /></div>}</div>
 
               </div>
               <div className='flex flex-col gap-1 items-center'>
@@ -432,13 +423,26 @@ const AboutTrailer = () => {
 
           </div>
           <div className='  border-t-1 border-[#fff3] py-4 lg:border-0 lg:py-0 lg:w-[calc(33.33%-3rem)] flex flex-col gap-2'>
-            <button className='bg-[#f5c518] rounded-4xl pr-2 pl-3 flex justify-between items-center max-w-100 lg:w-full' onClick={() => handleFav(id)}>
+            <button className='bg-[#f5c518] cursor-pointer rounded-4xl pr-2 pl-3 flex justify-between items-center max-w-100 lg:w-full' onClick={() => handleWatchList(currentUser?.id, movie)}>
               <span className='flex gap-2'>
-                <p className='text-4xl font-light'>+</p>
+                {watchlist ?
+                  (loading ? <div ><RoundedLoader /></div> : <svg xmlns="http://www.w3.org/2000/svg" width="24" className="fill-black "
+                    height="28"
+                    viewBox="0 0 20 20" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M9 16.2l-3.5-3.5a.984.984 0 0 0-1.4 0 .984.984 0 0 0 0 1.4l4.19 4.19c.39.39 1.02.39 1.41 0L20.3 7.7a.984.984 0 0 0 0-1.4.984.984 0 0 0-1.4 0L9 16.2z"></path></svg>)
+                  : (loading ? <div ><RoundedLoader /></div> : <svg
+                    className="fill-black"
+                    width="24"
+                    height="28"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z" />
+                  </svg>)}
 
-                <span className='flex flex-col items-start text-[0.875rem]'>
+                <span className='flex flex-col  items-start text-[0.875rem]'>
                   <p className='font-bold'>
                     Add to Watchlist
+
                   </p>
                   <p>
                     Added by {movie?.countWishlist && formatNumber(movie?.countWishlist)} users
@@ -447,12 +451,7 @@ const AboutTrailer = () => {
               </span>
               <p className='border-l-1 px-2 py-4 border-gray-900'> <GrFormNext className='rotate-90 text-2xl ' /></p>
             </button>
-            <button className='max-w-100 lg:w-full py-4 pr-2 pl-3 flex gap-2 text-[#5799ef] bg-white/10 rounded-4xl items-center'>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="ipc-icon ipc-icon--visibility ipc-btn__icon ipc-btn__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M0 0h24v24H0V0z" fill="none"></path>
-                <path d="M12 6c3.79 0 7.17 2.13 8.82 5.5C19.17 14.87 15.79 17 12 17s-7.17-2.13-8.82-5.5C4.83 8.13 8.21 6 12 6m0-2C7 4 2.73 7.11 1 11.5 2.73 15.89 7 19 12 19s9.27-3.11 11-7.5C21.27 7.11 17 4 12 4zm0 5c1.38 0 2.5 1.12 2.5 2.5S13.38 14 12 14s-2.5-1.12-2.5-2.5S10.62 9 12 9m0-2c-2.48 0-4.5 2.02-4.5 4.5S9.52 16 12 16s4.5-2.02 4.5-4.5S14.48 7 12 7z"></path>
-              </svg>
-              <p className='font-bold'>Mark as watched</p>
-            </button>
+            <div className=' max-w-100 lg:w-full text-[#5799ef] fill-[#5799ef] font-bold'><Watched movie={movie} /></div>
 
           </div>
           <div className='flex border-t-1 items-center border-[#fff3] py-2 w-full gap-5 lg:hidden'>

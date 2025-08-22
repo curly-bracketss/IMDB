@@ -37,7 +37,8 @@ const Filter = ({ onFilterChange }) => {
             <div ref={boxRef} onClick={(e) => handleClickOutside(e)}>
                 <button onClick={() => handleOpen()} className='sm:bg-white  sm:rounded-tl-md sm:rounded-bl-md  flex outline-none py-1 sm:hover:bg-[#f5f5f5] hover:bg-white/10  text-sm md:text-md  items-center  border-r-1 border-black px-2 cursor-pointer'>
                     <p className='text-white sm:text-black line-clamp-1'>{filter}</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" className='fill-white sm:fill-black' viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M8.71 11.71l2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71H9.41c-.89 0-1.33 1.08-.7 1.71z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" className={`${isOpen ? 'rotate-180' : ''} sm:fill-black fill-white transition-all duration-200 ease-in-out `} viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M8.71 11.71l2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71H9.41c-.89 0-1.33 1.08-.7 1.71z"></path></svg>
+
                 </button>
                 {isOpen &&
                     <div className={`bg-[#1f1f1f] ${isOpen ? 'open' : 'transition '} mt-2  flex flex-col py-4 w-60 absolute text-white z-200 max-[600px]:-bottom-[95vh] max-[600px]:w-full  `}>
@@ -88,7 +89,7 @@ const Filter = ({ onFilterChange }) => {
                         <path d="M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59 7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12 5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89a.996.996 0 0 0 0-1.4z" />
                     </svg>
                 </span>
-                </div>}
+            </div>}
 
         </div>
     )

@@ -31,8 +31,12 @@ const videoMap = {
 
 import { PiLineVerticalBold } from "react-icons/pi";
 export function Gallery() {
-  const { movieData } = useContext(dataCntxt);
-  const { swiperData } = useContext(dataCntxt);
+
+  const { movieData, swiperData } = useContext(dataCntxt)
+  const combinedData = [...(movieData || []), ...(swiperData || [])]
+  const data = combinedData.filter((item, index, self) =>
+    index === self.findIndex(movie => movie.id === item.id)
+  )
   const { id } = useParams()
   function formatNumber(num) {
     if (num === undefined || typeof num !== 'number') {
@@ -50,21 +54,21 @@ export function Gallery() {
   return (
     <div className="flex-col flex gap-10 py-10">
       <div className="flex flex-col gap-5">
-        <Link to={`/title/${id}/albumswiper/${movieData[0]?.id}`}>
+        <Link to={`/title/${id}/albumswiper/${data[0]?.id}`}>
           <div className='group flex  items-center relative '>
             {/* [#F5C518] */}
             <PiLineVerticalBold className='text-[#F5C518] text-[2rem] font-extrabold absolute -left-3' />
 
             <h1 className=' text-2xl font-bold flex items-center px-3 '>
               All photos </h1>
-            <p className="text-sm">  {movieData?.length}</p>
+            <p className="text-sm">  {data?.length}</p>
 
             <IoIosArrowForward className='text-3xl font-bold group-hover:text-[#F5C518]' />
           </div>
         </Link>
         <div className="flex flex-wrap gap-2">
 
-          {movieData?.slice(0, 6).map((movie, index) => (
+          {data?.slice(0, 6).map((movie, index) => (
             <div key={index} className=" xl:w-[calc(17%-1rem)] md:w-[calc(20%-1rem)] sm:w-[calc(32%)] w-9/20 overflow-hidden rounded-lg">
               <Link to={`/title/${id}/albumswiper/${movie?.id}`}>
                 <img
@@ -75,7 +79,7 @@ export function Gallery() {
               </Link>
             </div>
           ))}
-          <Link to={`/title/${id}/albumswiper/${movieData[6]?.id}`} className="bg-black/40 cursor-pointer hover:bg-black/50 text-white rounded-lg px-10 py-20">+19 more</Link>
+          <Link to={`/title/${id}/albumswiper/${data[6]?.id}`} className="bg-black/40 cursor-pointer hover:bg-black/50 text-white rounded-lg px-10 py-20">+23 more</Link>
 
 
         </div>
@@ -88,7 +92,7 @@ export function Gallery() {
 
             <h1 className=' text-2xl font-bold flex items-center px-3 '>
               All videos </h1>
-            <p className="text-sm">  {Object.entries(videoMap).length-2}</p>
+            <p className="text-sm">  {Object.entries(videoMap).length - 2}</p>
 
             <IoIosArrowForward className='text-3xl font-bold group-hover:text-[#F5C518]' />
           </div>
@@ -117,7 +121,7 @@ export function Gallery() {
                       <path d="M12 24C5.373 24 0 18.627 0 12S5.373 0 12 0s12 5.373 12 12-5.373 12-12 12zm0-1c6.075 0 11-4.925 11-11S18.075 1 12 1 1 5.925 1 12s4.925 11 11 11z"></path>
                     </svg>
                     <h4 >Trailer</h4>
-                    <p>{movieData.find(item => item.id === movieId)?.trailerDuration || swiperData.find(item => item.id === movieId)?.trailerDuration}</p>
+                    <p>{data.find(item => item.id === movieId)?.trailerDuration}</p>
                   </span>
 
                 </span>
@@ -130,14 +134,14 @@ export function Gallery() {
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 24 24" fill="currentColor" role="presentation">
                     <path d="M13.12 2.06c.58-.59 1.52-.59 2.11-.01.36.36.51.87.41 1.37L14.69 8h5.65c2.15 0 3.6 2.2 2.76 4.18l-3.26 7.61C19.52 20.52 18.8 21 18 21H9c-1.1 0-2-.9-2-2V9.01c0-.53.21-1.04.58-1.41l5.54-5.54zM9.293 8.707A1 1 0 0 0 9 9.414V18a1 1 0 0 0 1 1h7.332a1 1 0 0 0 .924-.617c1.663-4.014 2.527-6.142 2.594-6.383.07-.253.12-.587.15-1v-.002A1 1 0 0 0 20 10h-8l1.34-5.34-4.047 4.047zM3 21c1.1 0 2-.9 2-2v-8c0-1.1-.9-2-2-2s-2 .9-2 2v8c0 1.1.9 2 2 2z"></path>
                   </svg>
-                  {formatNumber(movieData.find(item => item.id === movieId)?.likeCount || swiperData.find(item => item.id === movieId)?.likeCount)}
+                  {formatNumber(data.find(item => item.id === movieId)?.likeCount)}
                 </span>
                 <span className="flex items-center gap-1 text-black/50" >
                   <span className="relative">
                     <FaHeart className="text-[#f5185ab0]  absolute text-[1.2rem] " />
                     <FaFaceGrinStars className=" text-[#f5c51893] ml-3 mt-1 text-[0.85rem]" />
                   </span>
-                  {movieData.find(item => item.id === movieId)?.reactions?.count || swiperData.find(item => item.id === movieId)?.reactions?.count}
+                  {data.find(item => item.id === movieId)?.reactions?.count}
                 </span>
               </span>
 

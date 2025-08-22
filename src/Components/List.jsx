@@ -3,7 +3,7 @@ import { useContext, useState } from "react"
 import Film from "./Film"
 import Detpos from "./Detpos"
 import Loader from "./Loader"
-const AllLists = () => {
+const Lists = () => {
   const { movieData } = useContext(dataCntxt)
 
   const data = movieData || []
@@ -13,7 +13,7 @@ const AllLists = () => {
   const [border, setBorder] = useState(false)
   const [loading, setLoading] = useState(false);
 
-
+  const { currentUser } = useContext(dataCntxt)
   function durationToMinutes(duration) {
     const hoursMatch = duration.match(/(\d+)h/);
     const minsMatch = duration.match(/(\d+)m/);
@@ -92,17 +92,37 @@ const AllLists = () => {
   }
 
 
+  // Total movies
+  const total = data?.length || 0;
+
+  // Watched movies
+  const watched = currentUser?.watchHistory?.length || 0;
+
+  // Percentage watched
+  const percent = total > 0 ? Math.round((watched / total) * 100) : 0;
+
 
   return (
     <div className='w-full lg:w-[calc(67.6%-1rem)] relative '>
       <div className=" flex flex-col gap-10">
 
         <div className="flex flex-col gap-2">
-          <div className="flex flex-col gap-2">
-            <div className='bg-[#0000008a]/10 rounded-[.5rem]   h-[.75rem] w-full'></div>
+          <div className="flex flex-col gap-2 w-full">
+            {/* Progress bar background */}
+            <div className="bg-[#0000008a]/10 rounded-[0.5rem] h-[0.75rem] w-full overflow-hidden">
+              {/* Filled portion */}
+              <div
+                className="bg-[#0e63be] h-full"
+                style={{ width: `${percent}%`, transition: "width 0.3s ease" }}
+              ></div>
+            </div>
+
+            {/* Labels */}
             <div className="flex justify-between items-center">
-              <p className="font-bold tracking-wider  uppercase text-sm">0 of {data.length} watched</p>
-              <p className="font-bold tracking-wider  uppercase text-sm">0%</p>
+              <p className="font-bold tracking-wider uppercase text-sm">
+                {watched} of {total} watched
+              </p>
+              <p className="font-bold tracking-wider uppercase text-sm">{percent}%</p>
             </div>
           </div>
           <div className="flex justify-between w-full items-center">
@@ -153,8 +173,8 @@ const AllLists = () => {
           ) : (
             <div
               className={`flex ${activeStructure === "grid"
-                  ? "flex-row flex-wrap justify-between border-0"
-                  : "flex-col border-1 p-2"
+                ? "flex-row flex-wrap justify-between border-0"
+                : "flex-col border-1 p-2"
                 } w-full rounded-sm border-black/10`}
             >
               {data.map((movie, index) =>
@@ -176,4 +196,4 @@ const AllLists = () => {
   )
 }
 
-export default AllLists
+export default Lists

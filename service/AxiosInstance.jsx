@@ -7,12 +7,12 @@ const AxiosInstance = axios.create({
     'Content-Type': 'application/json',
   },
 });
-// const AuthInstance = axios.create({
-//   baseURL: import.meta.env.VITE_AUTH_URL,
-//   timeout: 10000,
-//   headers: {
-//     'Content-Type': 'application/json',
-//   },
-// });
+const AuthInstance = axios.create({
+  baseURL: import.meta.env.VITE_AUTH_URL,
+  timeout: 10000,
+  headers: {
+    'Content-Type': 'application/json',
+  },
+});
 
-export { AxiosInstance };
+export { AxiosInstance,AuthInstance };

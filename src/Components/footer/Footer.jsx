@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { dataCntxt } from '../../../context/DataContext';
+import { useContext } from 'react';
 export default function Footer() {
+  const {currentUser}=useContext(dataCntxt)
   return (
     <footer className="bg-black  text-white   ">
        <div className="lg:hidden flex justify-center py-4 bg-white/10 ">
@@ -11,11 +14,11 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto py-12 px-6">
         {/* Sign in button */}
        
-        <div className="flex justify-center mb-12">
-          <Link to='/registration/sign-in' className="bg-white/10 hover:bg-[#5799ef]/20 text-[#5799ef] lg:bg-[#F5C518] lg:text-black px-8 py-2 rounded-full font-semibold lg:hover:bg-yellow-500 transition-colors">
+       {!currentUser&& <div className="flex justify-center mb-12">
+          <Link to='/registration/signin' className="bg-white/10 hover:bg-[#5799ef]/20 text-[#5799ef] lg:bg-[#F5C518] lg:text-black px-8 py-2 rounded-full font-semibold lg:hover:bg-yellow-500 transition-colors">
             Sign in for more access
           </Link>
-        </div>
+        </div>}
 
         {/* Main content area */}
         <div className="flex gap-12 items-center justify-center mb-8">

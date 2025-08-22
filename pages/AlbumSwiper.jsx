@@ -9,20 +9,25 @@ import { useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 export default function AlbumSwiper() {
-  const { movieData } = useContext(dataCntxt);
+    const { movieData, swiperData } = useContext(dataCntxt)
+    const combinedData = [...(movieData || []), ...(swiperData || [])]
+    const data = combinedData.filter((item, index, self) =>
+        index === self.findIndex(movie => movie.id === item.id)
+    )
+
   const navigate = useNavigate();
   const { id, srcId } = useParams();
   const [swiper, setSwiper] = useState(null);
 
   const getInitialSlideIndex = () => {
-    if (!movieData || !srcId) return 0;
-    const index = movieData.findIndex(movie => movie.id === srcId);
+    if (!data || !srcId) return 0;
+    const index = data.findIndex(movie => movie.id === srcId);
     return index >= 0 ? index : 0;
   };
 
   const handleSlideChange = (swiperInstance) => {
     const currentIndex = swiperInstance.activeIndex;
-    const currentMovie = movieData[currentIndex];
+    const currentMovie = data[currentIndex];
 
     if (currentMovie && currentMovie.id !== srcId) {
       navigate(`/title/${id}/albumswiper/${currentMovie.id}`, { replace: true });
@@ -30,13 +35,13 @@ export default function AlbumSwiper() {
   };
 
   useEffect(() => {
-    if (swiper && movieData) {
+    if (swiper && data) {
       const targetIndex = getInitialSlideIndex();
       if (swiper.activeIndex !== targetIndex) {
         swiper.slideTo(targetIndex, 0);
       }
     }
-  }, [srcId, swiper, movieData]);
+  }, [srcId, swiper, data]);
 
   return (
     <div className="fixed inset-0 bg-black z-50 flex items-center justify-center">
@@ -76,7 +81,7 @@ export default function AlbumSwiper() {
         onSwiper={setSwiper}
         onSlideChange={handleSlideChange}
       >
-        {movieData?.map((src, index) => (
+        {data?.map((src, index) => (
           <SwiperSlide key={index} className="flex flex-col items-center justify-center">
             <img
               src={src?.posterUrl}
