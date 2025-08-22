@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, useContext } from 'react';
 import Sidebar from './Sidebar';
 import logo from '../../assets/imdb.svg';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Search from './Search';
 import Menu from './Menu';
 import { PiLineVerticalBold } from 'react-icons/pi';
@@ -9,7 +9,6 @@ import { RiArrowDownSFill } from 'react-icons/ri';
 import imdbpro from '../../assets/icons/imdbpro.svg';
 import LanguageSelector from './LanguageSelector';
 import { dataCntxt } from '../../../context/DataContext';
-
 const Navbar = () => {
   const [selectedLabel, setSelectedLabel] = useState("English (United States)");
   const [selectedLanguage, setSelectedLanguage] = useState("EN");
@@ -17,9 +16,9 @@ const Navbar = () => {
   const [user, setUser] = useState(false)
   const [userDropdown, setUserDropdown] = useState(false)
   const selectorRef = useRef(null);
+const navigate=useNavigate()
 
   const { currentUser,setCurrentUser } = useContext(dataCntxt)
-
 
   console.log(currentUser?.name)
   const handleLanguageSelect = (lang) => {
@@ -44,14 +43,13 @@ const Navbar = () => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
-  function handleSignOut(setCurrentUser) {
+  function handleSignOut(currentUser) {
     // Remove user data from localStorage
-    localStorage.removeItem("currentUser");
+    localStorage.removeItem("user");
     localStorage.removeItem("token"); // optional if you store token
-
-    // Update context state
-    if (setCurrentUser) setCurrentUser(null);
-}
+    navigate('/registration/signin')
+     if(currentUser)setCurrentUser(null);
+  }
   return (
     <div className='bg-[#121212]'>
       <div className='flex items-center sm:gap-2  h-[60px] justify-between max-w-[1280px] mx-auto'>
@@ -79,7 +77,7 @@ const Navbar = () => {
 
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" className={`${userDropdown ? 'rotate-180' : ''} transition-all duration-200 ease-in-out `} viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M8.71 11.71l2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71H9.41c-.89 0-1.33 1.08-.7 1.71z"></path></svg>
             {userDropdown &&
-              <div className='bg-[#121212] border-1 rounded-sm border-[#ffffff1a] right-0 py-2 absolute text-white flex top-11 text-lg w-55 flex-col'>
+              <div className='bg-[#121212] border-1 rounded-sm border-[#ffffff1a] z-40 right-0 py-2 absolute text-white flex top-11 text-lg w-55 flex-col'>
                 <Link className='px-8 py-2 hover:bg-white/10' to={`/user/ur${currentUser?.id}/watchList`}>Your Watchlist</Link>
                 <Link className='px-8 py-2 hover:bg-white/10' to={`/user/ur${currentUser?.id}/watchHistory`}>Your watch history</Link>
                 <Link className='px-8 py-2 hover:bg-white/10' to={`/user/ur${currentUser?.id}/rateHistory`}>Your ratings</Link>

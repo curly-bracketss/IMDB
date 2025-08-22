@@ -12,6 +12,9 @@ const Register = () => {
         email: '',
         password: '',
         rePassword: '',
+        watchList:[],
+        rateHistory:[],
+        watchHistory:[]
     });
 
     const [errors, setErrors] = useState({

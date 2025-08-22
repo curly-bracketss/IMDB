@@ -15,7 +15,7 @@ const Post = ({ movie }) => {
     if (!movie) return;
     if (localStorage.getItem('user') && currentUser) {
         setUserExist(true);
-        setWatchList(currentUser.watchList.some(m => m.id === movie.id));
+        setWatchList(currentUser?.watchList?.some(m => m.id === movie.id));
     } else {
         setUserExist(false);
     }

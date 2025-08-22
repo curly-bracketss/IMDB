@@ -4,7 +4,7 @@ import { PiLineVerticalBold } from 'react-icons/pi'
 const Account = () => {
     return (
         <div className='bg-white '>
-            <div className='max-w-[1280px] mx-auto px-[0.75rem] flex justify-center py-10 pb-30 gap-10'>
+            <div className='max-w-[1280px] mx-auto px-[0.75rem] flex lg:flex-row flex-col justify-center py-10 pb-30 gap-10'>
                 <div className='flex flex-col gap-5 w-1/3 '>
                     <div className='group flex  items-center relative '>
                         {/* [#F5C518] */}
